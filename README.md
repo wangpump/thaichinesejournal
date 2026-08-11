@@ -1,2 +1,2 @@
 # thaichinesejournal
-Official Website of Thai-Chinese Journal
+Official Website of Thai Chinese Journal
