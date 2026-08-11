@@ -7,224 +7,899 @@
 
     <title>泰中学刊 | Journal of Thai Chinese Studies</title>
 
+    <meta name="description"
+          content="《泰中学刊》Journal of Thai Chinese Studies 官方网站。关注中泰关系、华侨华人、东南亚、泰国经济社会、国际中文教育与跨文化传播等研究。">
+
     <style>
+
+        /* ================================
+           基础设置
+        ================================= */
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family:
                 "Noto Serif SC",
                 "Songti SC",
+                "STSong",
                 "Microsoft YaHei",
                 serif;
+
             background: #ffffff;
             color: #222222;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
-        /* 顶部刊名区域 */
+
+        /* ================================
+           Logo 顶部区域
+        ================================= */
+
         .journal-header {
+
             max-width: 1200px;
             margin: 0 auto;
-            padding: 28px 30px;
+
+            padding:
+                35px
+                30px
+                28px;
+
             display: flex;
+            flex-direction: column;
+
             align-items: center;
-            gap: 28px;
+            text-align: center;
+
         }
+
 
         .journal-logo {
-            width: 110px;
+
+            width: 520px;
+            max-width: 90%;
+
             height: auto;
+
+            display: block;
+
+            margin:
+                0 auto
+                18px;
+
         }
 
-        .journal-name h1 {
-            font-size: 38px;
-            font-weight: 700;
-            letter-spacing: 4px;
-            color: #172c46;
-        }
 
-        .journal-name .english-title {
-            margin-top: 4px;
-            font-size: 20px;
-            color: #8b6914;
-        }
+        /* Logo 下方出版机构 */
 
-        .journal-name .publisher {
-            margin-top: 8px;
+        .publisher-line {
+
+            color: #555555;
+
             font-size: 14px;
-            color: #666666;
+
+            letter-spacing: 0.5px;
+
+            margin-top: 4px;
+
         }
 
-        /* 导航栏 */
-        .main-nav {
-            background: #172c46;
-            border-bottom: 4px solid #b79646;
+
+        .publisher-line-en {
+
+            color: #777777;
+
+            font-size: 12px;
+
+            margin-top: 2px;
+
+            letter-spacing: 0.6px;
+
         }
+
+
+        /* ================================
+           主导航栏
+        ================================= */
+
+        .main-nav {
+
+            background: #172c46;
+
+            border-top:
+                1px solid #b79646;
+
+            border-bottom:
+                4px solid #b79646;
+
+            position: relative;
+
+            z-index: 100;
+
+        }
+
 
         .main-nav ul {
-            max-width: 1200px;
+
+            max-width: 1250px;
+
             margin: 0 auto;
+
             display: flex;
+
+            align-items: stretch;
+
             list-style: none;
-            padding: 0 20px;
+
+            padding: 0 15px;
+
         }
+
 
         .main-nav li {
+
             flex: 1;
+
             text-align: center;
+
         }
+
 
         .main-nav a {
-            display: block;
-            padding: 16px 8px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            min-height: 70px;
+
+            padding: 11px 6px;
+
             color: #ffffff;
+
             text-decoration: none;
+
             font-size: 15px;
-            transition: background 0.2s;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease;
+
         }
+
 
         .main-nav a:hover {
+
             background: #b79646;
+
+            color: #ffffff;
+
         }
+
 
         .main-nav .en {
+
             display: block;
-            margin-top: 2px;
+
+            margin-top: 1px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
             font-size: 10px;
+
             opacity: 0.72;
+
+            letter-spacing: 0.3px;
+
         }
 
-        /* 首页主体 */
+
+        /* ================================
+           首页简介
+        ================================= */
+
         .hero {
+
             max-width: 1200px;
+
             margin: 0 auto;
-            padding: 65px 30px;
+
+            padding:
+                70px
+                40px
+                65px;
+
         }
 
-        .hero h2 {
-            font-size: 32px;
+
+        .section-label {
+
+            color: #b79646;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 15px;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .hero h1 {
+
             color: #172c46;
-            margin-bottom: 18px;
+
+            font-size: 34px;
+
+            font-weight: 600;
+
+            margin-bottom: 5px;
+
         }
 
-        .hero .subtitle {
-            font-size: 20px;
-            color: #9b7424;
+
+        .hero .english-title {
+
+            color: #8d6a21;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 21px;
+
             margin-bottom: 30px;
+
         }
+
+
+        .gold-line {
+
+            width: 60px;
+
+            height: 3px;
+
+            background: #b79646;
+
+            margin-bottom: 30px;
+
+        }
+
 
         .hero p {
-            max-width: 900px;
+
+            max-width: 950px;
+
             font-size: 17px;
-            color: #444444;
+
+            color: #404040;
+
+            line-height: 2;
+
+            text-align: justify;
+
         }
 
-        /* 研究领域 */
-        .scope {
-            background: #f7f6f2;
-            padding: 55px 30px;
+
+        /* ================================
+           期刊信息
+        ================================= */
+
+        .journal-info {
+
+            background: #172c46;
+
+            color: white;
+
         }
+
+
+        .journal-info-inner {
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding:
+                48px
+                40px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 30px;
+
+        }
+
+
+        .info-box {
+
+            border-left:
+                2px solid #b79646;
+
+            padding-left: 20px;
+
+        }
+
+
+        .info-box h3 {
+
+            color: #d5bc79;
+
+            font-size: 15px;
+
+            margin-bottom: 6px;
+
+        }
+
+
+        .info-box p {
+
+            font-size: 14px;
+
+            color: #eeeeee;
+
+            line-height: 1.6;
+
+        }
+
+
+        .info-box .small-en {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            color: #bfc8d3;
+
+            font-size: 11px;
+
+        }
+
+
+        /* ================================
+           研究领域
+        ================================= */
+
+        .scope {
+
+            background: #f7f6f2;
+
+            padding:
+                65px
+                30px
+                75px;
+
+        }
+
 
         .scope-inner {
+
             max-width: 1200px;
+
             margin: 0 auto;
+
         }
 
-        .scope h2 {
-            color: #172c46;
-            margin-bottom: 30px;
+
+        .scope-heading {
+
+            text-align: center;
+
+            margin-bottom: 42px;
+
         }
+
+
+        .scope-heading h2 {
+
+            color: #172c46;
+
+            font-size: 30px;
+
+            margin-bottom: 4px;
+
+        }
+
+
+        .scope-heading p {
+
+            color: #997526;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 16px;
+
+        }
+
 
         .scope-grid {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
         }
+
 
         .scope-item {
-            background: white;
-            padding: 24px;
-            border-top: 3px solid #b79646;
-            min-height: 95px;
+
+            background: #ffffff;
+
+            min-height: 145px;
+
+            padding: 28px 26px;
+
+            border-top:
+                4px solid #b79646;
+
+            box-shadow:
+                0 4px 16px
+                rgba(0,0,0,0.05);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+
         }
 
-        /* 底部 */
-        footer {
-            background: #172c46;
-            color: #ffffff;
-            text-align: center;
-            padding: 35px 20px;
+
+        .scope-item:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 8px 24px
+                rgba(0,0,0,0.08);
+
+        }
+
+
+        .scope-number {
+
+            color: #a67b23;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
             font-size: 14px;
+
+            margin-bottom: 12px;
+
         }
 
-        footer .english {
-            margin-top: 6px;
+
+        .scope-item h3 {
+
+            color: #172c46;
+
+            font-size: 18px;
+
+            font-weight: 600;
+
+        }
+
+
+        /* ================================
+           主要栏目入口
+        ================================= */
+
+        .featured {
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding:
+                70px
+                35px;
+
+        }
+
+
+        .featured-title {
+
+            text-align: center;
+
+            margin-bottom: 38px;
+
+        }
+
+
+        .featured-title h2 {
+
+            color: #172c46;
+
+            font-size: 29px;
+
+        }
+
+
+        .featured-title p {
+
+            color: #997526;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+        }
+
+
+        .featured-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .featured-card {
+
+            border:
+                1px solid #ded8ca;
+
+            padding: 35px;
+
+            text-decoration: none;
+
+            color: inherit;
+
+            background: #ffffff;
+
+            transition:
+                border-color 0.2s,
+                box-shadow 0.2s;
+
+        }
+
+
+        .featured-card:hover {
+
+            border-color: #b79646;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0,0,0,0.07);
+
+        }
+
+
+        .featured-card h3 {
+
+            color: #172c46;
+
+            font-size: 22px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .featured-card .featured-en {
+
+            color: #a17a28;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 14px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .featured-card p {
+
+            color: #666666;
+
+            font-size: 14px;
+
+        }
+
+
+        /* ================================
+           页脚
+        ================================= */
+
+        footer {
+
+            background: #172c46;
+
+            color: #ffffff;
+
+            text-align: center;
+
+            padding:
+                45px
+                20px;
+
+            border-top:
+                4px solid #b79646;
+
+        }
+
+
+        footer .publisher-cn {
+
+            font-size: 16px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        footer .publisher-en {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 12px;
+
             opacity: 0.8;
+
         }
 
-        /* 手机 */
-        @media (max-width: 800px) {
 
-            .journal-header {
-                flex-direction: column;
-                text-align: center;
+        footer .website {
+
+            color: #d4bc7c;
+
+            margin-top: 17px;
+
+            font-size: 14px;
+
+        }
+
+
+        footer .copyright {
+
+            opacity: 0.6;
+
+            margin-top: 20px;
+
+            font-size: 11px;
+
+        }
+
+
+        /* ================================
+           手机和平板
+        ================================= */
+
+        @media (max-width: 900px) {
+
+            .journal-logo {
+
+                width: 430px;
+
             }
+
 
             .main-nav ul {
+
                 flex-wrap: wrap;
+
             }
+
 
             .main-nav li {
-                flex: 0 0 50%;
+
+                flex:
+                    0 0
+                    25%;
+
             }
+
 
             .scope-grid {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
             }
 
-            .journal-name h1 {
-                font-size: 30px;
+
+            .journal-info-inner {
+
+                grid-template-columns: 1fr;
+
             }
+
         }
+
+
+        @media (max-width: 650px) {
+
+            .journal-header {
+
+                padding:
+                    24px
+                    15px
+                    20px;
+
+            }
+
+
+            .journal-logo {
+
+                width: 95%;
+
+            }
+
+
+            .publisher-line {
+
+                font-size: 12px;
+
+            }
+
+
+            .publisher-line-en {
+
+                font-size: 9px;
+
+            }
+
+
+            .main-nav li {
+
+                flex:
+                    0 0
+                    50%;
+
+            }
+
+
+            .main-nav a {
+
+                min-height: 62px;
+
+                font-size: 14px;
+
+            }
+
+
+            .hero {
+
+                padding:
+                    48px
+                    23px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 27px;
+
+            }
+
+
+            .hero .english-title {
+
+                font-size: 17px;
+
+            }
+
+
+            .hero p {
+
+                font-size: 15px;
+
+            }
+
+
+            .scope {
+
+                padding:
+                    50px
+                    20px;
+
+            }
+
+
+            .scope-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .featured {
+
+                padding:
+                    50px
+                    20px;
+
+            }
+
+
+            .featured-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
     </style>
+
 </head>
 
 
 <body>
 
+
+<!-- =====================================
+     网站 Logo
+====================================== -->
+
 <header class="journal-header">
 
-    <!-- Logo以后上传后启用 -->
-    <!--
     <img
-        src="images/logo.png"
-        alt="泰中学刊 Logo"
+        src="logo.png"
+        alt="泰中学刊 Journal of Thai Chinese Studies"
         class="journal-logo"
     >
-    -->
 
-    <div class="journal-name">
+    <div class="publisher-line">
+        泰中學會集團有限公司
+    </div>
 
-        <h1>泰中学刊</h1>
-
-        <div class="english-title">
-            Journal of Thai Chinese Studies
-        </div>
-
-        <div class="publisher">
-            泰中學會集團有限公司
-            ·
-            CHARTERED THAI-CHINESE SOCIETY GROUP CO., LIMITED
-        </div>
-
+    <div class="publisher-line-en">
+        CHARTERED THAI-CHINESE SOCIETY GROUP CO., LIMITED
     </div>
 
 </header>
 
+
+
+<!-- =====================================
+     主导航
+====================================== -->
 
 <nav class="main-nav">
 
@@ -233,56 +908,79 @@
         <li>
             <a href="index.html">
                 首页
-                <span class="en">Home</span>
+                <span class="en">
+                    Home
+                </span>
             </a>
         </li>
+
 
         <li>
             <a href="about.html">
                 期刊简介
-                <span class="en">About</span>
+                <span class="en">
+                    About
+                </span>
             </a>
         </li>
+
 
         <li>
             <a href="publications.html">
                 期刊发表
-                <span class="en">Publications</span>
+                <span class="en">
+                    Publications
+                </span>
             </a>
         </li>
+
 
         <li>
             <a href="translations.html">
                 泰学译丛/经典重刊
-                <span class="en">Translations / Reprints</span>
+                <span class="en">
+                    Translations / Reprints
+                </span>
             </a>
         </li>
+
 
         <li>
             <a href="editorial-board.html">
                 编委会
-                <span class="en">Editorial Board</span>
+                <span class="en">
+                    Editorial Board
+                </span>
             </a>
         </li>
+
 
         <li>
             <a href="submission.html">
                 投稿指南
-                <span class="en">Submission</span>
+                <span class="en">
+                    Submission
+                </span>
             </a>
         </li>
+
 
         <li>
             <a href="ethics.html">
                 出版伦理
-                <span class="en">Publication Ethics</span>
+                <span class="en">
+                    Publication Ethics
+                </span>
             </a>
         </li>
+
 
         <li>
             <a href="contact.html">
                 联系我们
-                <span class="en">Contact</span>
+                <span class="en">
+                    Contact
+                </span>
             </a>
         </li>
 
@@ -291,64 +989,104 @@
 </nav>
 
 
+
 <main>
+
+
+<!-- =====================================
+     期刊简介
+====================================== -->
 
 <section class="hero">
 
-    <h2>关于《泰中学刊》</h2>
+    <div class="section-label">
+        ABOUT THE JOURNAL
+    </div>
 
-    <div class="subtitle">
+    <h1>
+        关于《泰中学刊》
+    </h1>
+
+    <div class="english-title">
         Journal of Thai Chinese Studies
     </div>
 
+    <div class="gold-line"></div>
+
+
     <p>
+
         《泰中学刊》是一份以中泰关系研究为核心，
         兼及华侨华人研究、东南亚研究、
         泰国经济与社会研究、
         国际中文教育与跨文化传播，
         以及泰学译丛与经典重刊的综合性学术期刊。
+
+        期刊坚持学术规范与同行评审，
+        致力于推动泰国、中国及东南亚相关研究成果的整理、
+        发表与传播，促进中泰两国及东南亚区域学术交流。
+
     </p>
 
 </section>
 
 
-<section class="scope">
 
-    <div class="scope-inner">
+<!-- =====================================
+     基本期刊信息
+====================================== -->
 
-        <h2>研究领域 / Aims &amp; Scope</h2>
+<section class="journal-info">
 
-        <div class="scope-grid">
+    <div class="journal-info-inner">
 
-            <div class="scope-item">
-                <strong>01</strong><br>
-                中泰关系研究
-            </div>
+        <div class="info-box">
 
-            <div class="scope-item">
-                <strong>02</strong><br>
-                华侨华人研究
-            </div>
+            <h3>
+                出版机构
+            </h3>
 
-            <div class="scope-item">
-                <strong>03</strong><br>
-                东南亚研究
-            </div>
+            <p>
+                泰中學會集團有限公司
+            </p>
 
-            <div class="scope-item">
-                <strong>04</strong><br>
-                泰国经济、社会研究
-            </div>
+            <p class="small-en">
+                CHARTERED THAI-CHINESE SOCIETY GROUP CO., LIMITED
+            </p>
 
-            <div class="scope-item">
-                <strong>05</strong><br>
-                国际中文教育与跨文化传播
-            </div>
+        </div>
 
-            <div class="scope-item">
-                <strong>06</strong><br>
-                泰学译丛/经典重刊
-            </div>
+
+        <div class="info-box">
+
+            <h3>
+                出版形式
+            </h3>
+
+            <p>
+                在线学术期刊
+            </p>
+
+            <p class="small-en">
+                Online Academic Journal
+            </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <h3>
+                审稿制度
+            </h3>
+
+            <p>
+                同行评审
+            </p>
+
+            <p class="small-en">
+                Peer Review
+            </p>
 
         </div>
 
@@ -356,24 +1094,217 @@
 
 </section>
 
+
+
+<!-- =====================================
+     六个研究领域
+====================================== -->
+
+<section class="scope">
+
+    <div class="scope-inner">
+
+        <div class="scope-heading">
+
+            <h2>
+                研究领域
+            </h2>
+
+            <p>
+                Aims &amp; Scope
+            </p>
+
+        </div>
+
+
+        <div class="scope-grid">
+
+
+            <div class="scope-item">
+
+                <div class="scope-number">
+                    01
+                </div>
+
+                <h3>
+                    中泰关系研究
+                </h3>
+
+            </div>
+
+
+            <div class="scope-item">
+
+                <div class="scope-number">
+                    02
+                </div>
+
+                <h3>
+                    华侨华人研究
+                </h3>
+
+            </div>
+
+
+            <div class="scope-item">
+
+                <div class="scope-number">
+                    03
+                </div>
+
+                <h3>
+                    东南亚研究
+                </h3>
+
+            </div>
+
+
+            <div class="scope-item">
+
+                <div class="scope-number">
+                    04
+                </div>
+
+                <h3>
+                    泰国经济、社会研究
+                </h3>
+
+            </div>
+
+
+            <div class="scope-item">
+
+                <div class="scope-number">
+                    05
+                </div>
+
+                <h3>
+                    国际中文教育与跨文化传播
+                </h3>
+
+            </div>
+
+
+            <div class="scope-item">
+
+                <div class="scope-number">
+                    06
+                </div>
+
+                <h3>
+                    泰学译丛/经典重刊
+                </h3>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     核心栏目入口
+====================================== -->
+
+<section class="featured">
+
+    <div class="featured-title">
+
+        <h2>
+            期刊内容
+        </h2>
+
+        <p>
+            Journal Contents
+        </p>
+
+    </div>
+
+
+    <div class="featured-grid">
+
+
+        <a
+            href="publications.html"
+            class="featured-card"
+        >
+
+            <h3>
+                期刊发表
+            </h3>
+
+            <div class="featured-en">
+                Publications
+            </div>
+
+            <p>
+                查看《泰中学刊》各卷、各期正式出版内容、
+                文章目录及全文资料。
+            </p>
+
+        </a>
+
+
+
+        <a
+            href="translations.html"
+            class="featured-card"
+        >
+
+            <h3>
+                泰学译丛/经典重刊
+            </h3>
+
+            <div class="featured-en">
+                Thai Studies Translations /
+                Classic Reprints
+            </div>
+
+            <p>
+                收录泰国研究重要译文、历史文献、
+                经典学术成果及旧刊重刊。
+            </p>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
 </main>
 
 
+
+<!-- =====================================
+     页脚
+====================================== -->
+
 <footer>
 
-    <div>
+    <div class="publisher-cn">
         泰中學會集團有限公司
     </div>
 
-    <div class="english">
+    <div class="publisher-en">
         CHARTERED THAI-CHINESE SOCIETY GROUP CO., LIMITED
     </div>
 
-    <div style="margin-top: 12px;">
+    <div class="website">
         thaichinesejournal.org
     </div>
 
+    <div class="copyright">
+        © 2026 Journal of Thai Chinese Studies
+    </div>
+
 </footer>
+
 
 </body>
 
