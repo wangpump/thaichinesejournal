@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        投稿指南 | 泰中学刊 | Journal of Thai Chinese Studies
+    </title>
+
+    <meta
+        name="description"
+        content="《泰中学刊》投稿指南，包括稿件类型、投稿要求、同行评议、审稿周期、版权授权及投稿方式。"
+    >
+
+    <style>
+
+        :root {
+            --paper: #F5EFE3;
+            --paper-light: #FBF7EF;
+            --red: #7A1F1F;
+            --red-light: #8B2E2E;
+            --deep-red: #4E1717;
+            --gold: #A67C32;
+            --bronze: #8C6A2F;
+            --text: #3A2E28;
+            --muted: #75675C;
+            --border: #D8C6A4;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--paper);
+            color: var(--text);
+            font-family:
+                "Noto Serif SC",
+                "Songti SC",
+                "STSong",
+                "SimSun",
+                serif;
+            line-height: 1.9;
+        }
+
+        /* ==============================
+           Logo
+        ============================== */
+
+        .journal-header {
+            background: var(--paper-light);
+            text-align: center;
+            padding: 28px 20px 20px;
+        }
+
+        .journal-logo {
+            width: 520px;
+            max-width: 92%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* ==============================
+           导航栏
+        ============================== */
+
+        .main-nav {
+            background: var(--red);
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .main-nav ul {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .main-nav li {
+            flex: 1;
+            text-align: center;
+        }
+
+        .main-nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 72px;
+            padding: 10px 5px;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .main-nav a:hover {
+            background: var(--red-light);
+        }
+
+        .main-nav .en {
+            display: block;
+            margin-top: 2px;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 9px;
+            opacity: 0.82;
+        }
+
+        /* ==============================
+           页面标题
+        ============================== */
+
+        .hero {
+            background: var(--paper-light);
+            padding: 65px 30px 50px;
+        }
+
+        .hero-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-kicker {
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 15px;
+            letter-spacing: 1.8px;
+            margin-bottom: 6px;
+        }
+
+        .hero h1 {
+            color: var(--red);
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .hero-en {
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 21px;
+            margin-bottom: 26px;
+        }
+
+        .gold-divider {
+            width: 70px;
+            height: 3px;
+            background: var(--gold);
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 900px;
+            font-size: 16px;
+            line-height: 2;
+            text-align: justify;
+        }
+
+        /* ==============================
+           投稿指南主体
+        ============================== */
+
+        .guidelines-section {
+            padding: 60px 30px 80px;
+        }
+
+        .guidelines-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .guide-card {
+            background: var(--paper-light);
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--red);
+            padding: 34px 38px;
+            margin-bottom: 26px;
+            box-shadow:
+                0 6px 18px
+                rgba(70, 40, 20, 0.05);
+        }
+
+        .guide-card h2 {
+            color: var(--red);
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .guide-card p {
+            font-size: 16px;
+            line-height: 2;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .guide-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .guide-card strong {
+            color: var(--red);
+        }
+
+        .guide-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .guide-list li {
+            position: relative;
+            padding-left: 1.6em;
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 2;
+            text-align: justify;
+        }
+
+        .guide-list li::before {
+            content: "◆";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--gold);
+            font-size: 10px;
+        }
+
+        .guide-list strong {
+            color: var(--red);
+        }
+
+        /* ==============================
+           审稿流程
+        ============================== */
+
+        .review-flow {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        .review-step {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-top: 3px solid var(--gold);
+            padding: 20px 14px;
+            text-align: center;
+        }
+
+        .review-step .number {
+            color: var(--gold);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+
+        .review-step h3 {
+            color: var(--red);
+            font-size: 17px;
+            margin-bottom: 7px;
+        }
+
+        .review-step p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.7;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* ==============================
+           投稿邮箱重点区域
+        ============================== */
+
+        .submission-box {
+            background: var(--red);
+            color: var(--paper-light);
+            border-top: 5px solid var(--gold);
+            padding: 35px;
+            margin-top: 5px;
+        }
+
+        .submission-box h2 {
+            color: #E5CD94;
+            font-size: 24px;
+            margin-bottom: 17px;
+        }
+
+        .submission-box p {
+            line-height: 2;
+            margin-bottom: 12px;
+        }
+
+        .submission-box strong {
+            color: #F0D99F;
+        }
+
+        .submission-link {
+            color: #FFFFFF;
+            text-decoration: none;
+            border-bottom: 1px solid #E5CD94;
+        }
+
+        .submission-link:hover {
+            color: #E5CD94;
+        }
+
+        /* ==============================
+           日期签名
+        ============================== */
+
+        .signature {
+            max-width: 1000px;
+            margin: 35px auto 0;
+            text-align: right;
+            color: var(--text);
+            line-height: 2;
+            font-size: 15px;
+        }
+
+        /* ==============================
+           页脚
+        ============================== */
+
+        footer {
+            background: var(--deep-red);
+            color: #D9C59A;
+            text-align: center;
+            padding: 24px 15px;
+            border-top: 3px solid var(--gold);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 12px;
+        }
+
+        /* ==============================
+           平板
+        ============================== */
+
+        @media (max-width: 950px) {
+
+            .main-nav ul {
+                flex-wrap: wrap;
+            }
+
+            .main-nav li {
+                flex: 0 0 25%;
+            }
+
+            .review-flow {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        /* ==============================
+           手机
+        ============================== */
+
+        @media (max-width: 650px) {
+
+            .journal-logo {
+                width: 95%;
+            }
+
+            .main-nav li {
+                flex: 0 0 50%;
+            }
+
+            .hero {
+                padding: 45px 22px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .guidelines-section {
+                padding: 40px 18px 60px;
+            }
+
+            .guide-card {
+                padding: 28px 22px;
+            }
+
+            .review-flow {
+                grid-template-columns: 1fr;
+            }
+
+            .submission-box {
+                padding: 28px 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- ==============================
+     Logo
+============================== -->
+
+<header class="journal-header">
+
+    <img
+        src="logo.png"
+        alt="泰中学刊 Journal of Thai Chinese Studies"
+        class="journal-logo"
+    >
+
+</header>
+
+<!-- ==============================
+     导航栏
+============================== -->
+
+<nav class="main-nav">
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                首页
+                <span class="en">Home</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="history.html">
+                过往历史
+                <span class="en">History</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="society.html">
+                泰中学会
+                <span class="en">Thai-Chinese Society</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="editorial-board.html">
+                学刊编委
+                <span class="en">Editorial Board</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="submission.html">
+                投稿指南
+                <span class="en">Submission Guidelines</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="ethics.html">
+                出版伦理
+                <span class="en">Publication Ethics</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html">
+                联系我们
+                <span class="en">Contact</span>
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+<main>
+
+<!-- ==============================
+     页面标题
+============================== -->
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div class="section-kicker">
+            SUBMISSION GUIDELINES
+        </div>
+
+        <h1>
+            《泰中学刊》投稿指南
+        </h1>
+
+        <div class="hero-en">
+            Submission Guidelines
+        </div>
+
+        <div class="gold-divider"></div>
+
+        <p>
+            《泰中学刊》欢迎海内外学者围绕中泰关系、华侨华人、东南亚区域国别研究、泰国经济与社会、国际中文教育与跨文化传播、中国传统文化及其现代化等领域投稿。
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ==============================
+     投稿指南正文
+============================== -->
+
+<section class="guidelines-section">
+
+    <div class="guidelines-inner">
+
+        <!-- 一 -->
+
+        <div class="guide-card">
+
+            <h2>
+                一、稿件类型
+            </h2>
+
+            <p>
+                本刊接受以下类型的稿件：
+            </p>
+
+            <ul class="guide-list">
+
+                <li>
+                    <strong>研究论文：</strong>
+                    具有原创性的学术研究论文，字数一般在8000—15000字之间。
+                </li>
+
+                <li>
+                    <strong>专题论文：</strong>
+                    针对特定主题的深入研究，字数可适当放宽。
+                </li>
+
+                <li>
+                    <strong>研究综述：</strong>
+                    对某一领域研究现状的系统梳理与评述，字数一般在6000—12000字之间。
+                </li>
+
+                <li>
+                    <strong>书评：</strong>
+                    对近期出版学术著作的评论，字数一般在2000—4000字之间。
+                </li>
+
+                <li>
+                    <strong>译文：</strong>
+                    翻译泰国或其他国家学者的优秀学术成果，需附原文及授权证明。
+                </li>
+
+                <li>
+                    <strong>学术动态：</strong>
+                    学术会议综述、研究动态等，字数一般在1500—3000字之间。
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- 二 -->
+
+        <div class="guide-card">
+
+            <h2>
+                二、投稿要求
+            </h2>
+
+            <ul class="guide-list">
+
+                <li>
+                    <strong>原创性：</strong>
+                    投稿稿件须为作者原创，未在其他刊物或平台公开发表，不存在一稿多投、抄袭、剽窃等学术不端行为。
+                </li>
+
+                <li>
+                    <strong>语言：</strong>
+                    本刊只接受简体中文稿件。
+                </li>
+
+                <li>
+                    <strong>格式：</strong>
+                    稿件请使用Word文档格式，正文使用宋体（中文）或Times New Roman（英文），字号为小四，行距为1.5倍。
+                </li>
+
+                <li>
+                    <strong>结构：</strong>
+                    研究论文应包含标题、作者姓名、单位、摘要、关键词、正文、注释及参考文献。
+                </li>
+
+                <li>
+                    <strong>摘要与关键词：</strong>
+                    中文稿件需附英文摘要及关键词。摘要字数一般在200—300字之间，关键词3—5个。
+                </li>
+
+                <li>
+                    <strong>注释与参考文献：</strong>
+                    本刊采用脚注形式，注释及参考文献格式请参照《中国学术期刊（光盘版）检索与数据评价规范》（GB/T 7714）或APA格式。
+                </li>
+
+                <li>
+                    <strong>作者信息：</strong>
+                    请在稿件首页注明作者姓名、单位、职称、研究方向、通讯地址、联系电话及电子邮箱。
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- 三 -->
+
+        <div class="guide-card">
+
+            <h2>
+                三、审稿流程
+            </h2>
+
+            <div class="review-flow">
+
+                <div class="review-step">
+
+                    <div class="number">
+                        STEP 01
+                    </div>
+
+                    <h3>
+                        初审
+                    </h3>
+
+                    <p>
+                        审核学术质量、格式规范及征稿范围。
+                    </p>
+
+                </div>
+
+                <div class="review-step">
+
+                    <div class="number">
+                        STEP 02
+                    </div>
+
+                    <h3>
+                        同行评议
+                    </h3>
+
+                    <p>
+                        送交2—3位相关领域外部专家进行双向匿名同行评议。
+                    </p>
+
+                </div>
+
+                <div class="review-step">
+
+                    <div class="number">
+                        STEP 03
+                    </div>
+
+                    <h3>
+                        复审
+                    </h3>
+
+                    <p>
+                        根据评议意见决定录用、修改后录用或退稿。
+                    </p>
+
+                </div>
+
+                <div class="review-step">
+
+                    <div class="number">
+                        STEP 04
+                    </div>
+
+                    <h3>
+                        终审
+                    </h3>
+
+                    <p>
+                        主编对拟录用稿件进行终审。
+                    </p>
+
+                </div>
+
+                <div class="review-step">
+
+                    <div class="number">
+                        STEP 05
+                    </div>
+
+                    <h3>
+                        修改与校对
+                    </h3>
+
+                    <p>
+                        作者修改后，由编辑部进行编辑加工与校对。
+                    </p>
+
+                </div>
+
+            </div>
+
+            <p style="margin-top: 25px;">
+                <strong>初审：</strong>
+                编辑部收到稿件后，将及时完成初审，对稿件的学术质量、格式规范及是否符合征稿范围进行初步审核。
+            </p>
+
+            <p>
+                <strong>同行评议：</strong>
+                通过初审的稿件将送交2—3位相关领域的外部专家进行双向匿名同行评议。
+            </p>
+
+            <p>
+                <strong>复审：</strong>
+                编辑部根据同行评议意见，决定稿件是否录用、修改后录用或退稿。
+            </p>
+
+            <p>
+                <strong>终审：</strong>
+                主编对拟录用稿件进行终审，确定最终录用名单。
+            </p>
+
+            <p>
+                <strong>修改与校对：</strong>
+                作者需根据审稿意见对稿件进行修改，编辑部将对录用稿件进行编辑加工与校对。
+            </p>
+
+        </div>
+
+        <!-- 四 -->
+
+        <div class="guide-card">
+
+            <h2>
+                四、审稿周期
+            </h2>
+
+            <p>
+                本刊审稿周期一般为2—3个月。如稿件需修改，编辑部将在收到修改稿后1个月内完成复审。
+            </p>
+
+        </div>
+
+        <!-- 五 -->
+
+        <div class="guide-card">
+
+            <h2>
+                五、版权与授权
+            </h2>
+
+            <ul class="guide-list">
+
+                <li>
+                    <strong>版权转让：</strong>
+                    稿件一经录用，作者需签署《版权转让协议》，将稿件的出版权、网络传播权等权利授予《泰中学刊》编辑部。
+                </li>
+
+                <li>
+                    <strong>开放获取：</strong>
+                    本刊积极推进开放获取（OA）出版，录用稿件将在数字化平台免费向公众开放。
+                </li>
+
+                <li>
+                    <strong>作者权益：</strong>
+                    作者保留稿件的署名权及学术使用权，可在征得编辑部同意后，将稿件收录于个人学术成果集或教学材料中。
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- 六 -->
+
+        <div class="submission-box">
+
+            <h2>
+                六、投稿方式
+            </h2>
+
+            <p>
+                请将稿件以<strong>Word文档</strong>形式发送至《泰中学刊》编辑部电子邮箱：
+            </p>
+
+            <p>
+                <a
+                    href="mailto:thaichinesejournal@gmail.com"
+                    class="submission-link"
+                >
+                    thaichinesejournal@gmail.com
+                </a>
+            </p>
+
+            <p>
+                邮件主题请注明：
+                <strong>“投稿 + 作者姓名 + 稿件标题”</strong>。
+            </p>
+
+        </div>
+
+        <!-- 七 -->
+
+        <div class="guide-card">
+
+            <h2>
+                七、联系方式
+            </h2>
+
+            <p>
+                <strong>《泰中学刊》编辑部</strong>
+            </p>
+
+            <p>
+                电子邮箱：
+                <a
+                    href="mailto:thaichinesejournal@gmail.com"
+                    style="color:#7A1F1F;"
+                >
+                    thaichinesejournal@gmail.com
+                </a>
+            </p>
+
+            <p>
+                官方网站：
+                <a
+                    href="https://thaichinesejournal.org/"
+                    style="color:#7A1F1F;"
+                >
+                    https://thaichinesejournal.org/
+                </a>
+            </p>
+
+        </div>
+
+        <!-- 八 -->
+
+        <div class="guide-card">
+
+            <h2>
+                八、特别声明
+            </h2>
+
+            <p>
+                本刊对录用稿件有权进行文字性修改、删节，如需进行内容修改，将征得作者同意。
+            </p>
+
+            <p>
+                本刊保留对投稿指南的最终解释权。
+            </p>
+
+        </div>
+
+        <!-- 签名 -->
+
+        <div class="signature">
+
+            <div>
+                《泰中学刊》编辑部
+            </div>
+
+            <div>
+                2026年8月
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+
+    © 2026 Journal of Thai Chinese Studies
+
+</footer>
+
+</body>
+
+</html>
