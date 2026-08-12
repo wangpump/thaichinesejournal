@@ -16,7 +16,7 @@
 
     <meta
         name="description"
-        content="《泰中学刊》经典重刊页面，收录历期目录、历史整期重刊及经典文章重刊资料。"
+        content="《泰中学刊》经典重刊页面，收录1994年至2018年历史刊物、历期目录及数字化重刊资料。"
     >
 
     <style>
@@ -167,118 +167,145 @@
             text-indent: 2em;
         }
 
-        .archive-section {
-            padding: 65px 30px 75px;
+        .toc-section {
+            padding: 60px 30px 30px;
         }
 
-        .archive-inner {
+        .toc-inner {
             max-width: 1000px;
             margin: 0 auto;
         }
 
-        .archive-card {
+        .toc-card {
             background: var(--paper-light);
             border: 1px solid var(--border);
             border-top: 5px solid var(--red);
-            padding: 40px 42px;
+            padding: 35px 38px;
             box-shadow:
                 0 8px 25px
                 rgba(70, 40, 20, 0.07);
         }
 
-        .archive-label {
-            color: var(--gold);
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-
-        .archive-card h2 {
+        .toc-card h2 {
             color: var(--red);
-            font-size: 27px;
+            font-size: 25px;
             margin-bottom: 4px;
         }
 
-        .archive-card .en {
+        .toc-card .en {
             color: var(--bronze);
             font-family:
                 Georgia,
                 "Times New Roman",
                 serif;
-            font-size: 15px;
-            margin-bottom: 22px;
+            font-size: 14px;
+            margin-bottom: 20px;
         }
 
-        .archive-card p {
-            font-size: 16px;
-            line-height: 2;
-            text-align: justify;
-            margin-bottom: 24px;
+        .toc-card p {
+            margin-bottom: 20px;
+            line-height: 1.9;
         }
 
-        .pdf-button {
+        .toc-link {
             display: inline-block;
-            padding: 12px 24px;
             background: var(--red);
             color: #fff;
             text-decoration: none;
+            padding: 11px 22px;
             border: 1px solid var(--gold);
-            transition:
-                background 0.2s ease,
-                transform 0.2s ease;
         }
 
-        .pdf-button:hover {
+        .toc-link:hover {
             background: var(--red-light);
-            transform: translateY(-2px);
         }
 
-        .future-section {
-            background: var(--paper-light);
-            padding: 60px 30px 70px;
+        .issues-section {
+            padding: 45px 30px 80px;
         }
 
-        .future-inner {
-            max-width: 1000px;
+        .issues-inner {
+            max-width: 1100px;
             margin: 0 auto;
         }
 
-        .future-inner h2 {
-            color: var(--red);
-            font-size: 28px;
-            margin-bottom: 5px;
+        .issues-heading {
+            text-align: center;
+            margin-bottom: 35px;
         }
 
-        .future-inner .en {
+        .issues-heading h2 {
+            color: var(--red);
+            font-size: 29px;
+            margin-bottom: 4px;
+        }
+
+        .issues-heading p {
             color: var(--bronze);
             font-family:
                 Georgia,
                 "Times New Roman",
                 serif;
-            margin-bottom: 28px;
         }
 
-        .future-grid {
+        .issues-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
-        .future-card {
+        .issue-card {
+            display: block;
+            text-decoration: none;
+            background: var(--paper-light);
             border: 1px solid var(--border);
-            background: var(--paper);
-            padding: 30px;
+            border-top: 4px solid var(--gold);
+            padding: 25px 22px;
+            min-height: 145px;
+            color: var(--text);
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
         }
 
-        .future-card h3 {
+        .issue-card:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 8px 20px
+                rgba(70, 40, 20, 0.08);
+            border-color: var(--red);
+        }
+
+        .issue-number {
+            color: var(--gold);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .issue-card h3 {
             color: var(--red);
-            font-size: 20px;
-            margin-bottom: 6px;
+            font-size: 19px;
+            margin-bottom: 5px;
         }
 
-        .future-card p {
+        .issue-en {
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 12px;
+        }
+
+        .issue-note {
             color: var(--muted);
-            font-size: 14px;
-            line-height: 1.9;
+            font-size: 13px;
+            margin-top: 10px;
         }
 
         footer {
@@ -304,6 +331,10 @@
                 flex: 0 0 25%;
             }
 
+            .issues-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
         }
 
         @media (max-width: 650px) {
@@ -324,15 +355,19 @@
                 font-size: 29px;
             }
 
-            .archive-section {
-                padding: 45px 18px;
+            .toc-section {
+                padding: 40px 18px 20px;
             }
 
-            .archive-card {
-                padding: 30px 22px;
+            .toc-card {
+                padding: 28px 22px;
             }
 
-            .future-grid {
+            .issues-section {
+                padding: 35px 18px 60px;
+            }
+
+            .issues-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -432,22 +467,18 @@
         <div class="gold-divider"></div>
 
         <p>
-            “经典重刊”栏目主要整理并重新发布《泰中学刊》历史刊物、经典学术论文及具有重要资料价值的文献内容。重刊资料原则上保留原作者、原刊期次、原始出版时间及原有学术归属，并根据数字化出版需要进行必要的整理与说明。
+            本栏目整理并重新发布《泰中学刊》历史刊物及具有重要学术与史料价值的文献内容。历史整期重刊原则上保留原出版年份、刊期、作者及原有学术归属，并逐步推进数字化整理与网络发布。
         </p>
 
     </div>
 
 </section>
 
-<section class="archive-section">
+<section class="toc-section">
 
-    <div class="archive-inner">
+    <div class="toc-inner">
 
-        <div class="archive-card">
-
-            <div class="archive-label">
-                ARCHIVE OF ISSUES
-            </div>
+        <div class="toc-card">
 
             <h2>
                 《泰中学刊》历期目录
@@ -458,15 +489,15 @@
             </div>
 
             <p>
-                本资料汇集《泰中学刊》历年已出版刊物的目录信息，为读者查阅历史刊期、文章题目、作者及相关研究资料提供索引。后续将逐步补充历史整期刊物、单篇经典文章及数字化重刊资料。
+                汇集1994年至2018年《泰中学刊》历年刊物目录信息，便于查阅历史文章、作者及刊期资料。
             </p>
 
             <a
                 href="reprints/all-issues-table-of-contents.pdf"
                 target="_blank"
-                class="pdf-button"
+                class="toc-link"
             >
-                查看历期目录 PDF
+                查看历期目录
             </a>
 
         </div>
@@ -475,43 +506,155 @@
 
 </section>
 
-<section class="future-section">
+<section class="issues-section">
 
-    <div class="future-inner">
+    <div class="issues-inner">
 
-        <h2>
-            重刊资料
-        </h2>
+        <div class="issues-heading">
 
-        <div class="en">
-            Reprint Archive
+            <h2>
+                历史整期重刊
+            </h2>
+
+            <p>
+                Historical Issues
+            </p>
+
         </div>
 
-        <div class="future-grid">
+        <div class="issues-grid">
 
-            <div class="future-card">
+            <a href="reprints/1994-01.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 01</div>
+                <h3>1994年 第1期</h3>
+                <div class="issue-en">1994 · Issue No. 1</div>
+            </a>
 
-                <h3>
-                    历史整期重刊
-                </h3>
+            <a href="reprints/1995-02.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 02</div>
+                <h3>1995年 第2期</h3>
+                <div class="issue-en">1995 · Issue No. 2</div>
+            </a>
 
-                <p>
-                    后续将按原出版年份与刊期，逐步整理并发布《泰中学刊》历史整期 PDF 资料。
-                </p>
+            <a href="reprints/1996-03.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 03</div>
+                <h3>1996年 第3期</h3>
+                <div class="issue-en">1996 · Issue No. 3</div>
+            </a>
 
-            </div>
+            <a href="reprints/1998-04.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 04</div>
+                <h3>1998年 第4期</h3>
+                <div class="issue-en">1998 · Issue No. 4</div>
+            </a>
 
-            <div class="future-card">
+            <a href="reprints/1999-05.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 05</div>
+                <h3>1999年 第5期</h3>
+                <div class="issue-en">1999 · Issue No. 5</div>
+            </a>
 
-                <h3>
-                    经典文章重刊
-                </h3>
+            <a href="reprints/2000-06.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 06</div>
+                <h3>2000年 第6期</h3>
+                <div class="issue-en">2000 · Issue No. 6</div>
+            </a>
 
-                <p>
-                    选取具有持续学术价值和重要史料价值的经典文章，保留原始出版信息并进行数字化重刊。
-                </p>
+            <a href="reprints/2001-07.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 07</div>
+                <h3>2001年 第7期</h3>
+                <div class="issue-en">2001 · Issue No. 7</div>
+            </a>
 
-            </div>
+            <a href="reprints/2002-08.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 08</div>
+                <h3>2002年 第8期</h3>
+                <div class="issue-en">2002 · Issue No. 8</div>
+            </a>
+
+            <a href="reprints/2004-09.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 09</div>
+                <h3>2004年 第9期</h3>
+                <div class="issue-en">2004 · Issue No. 9</div>
+            </a>
+
+            <a href="reprints/2005-10.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 10</div>
+                <h3>2005年 第10期</h3>
+                <div class="issue-en">2005 · Issue No. 10</div>
+            </a>
+
+            <a href="reprints/2006-11.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 11</div>
+                <h3>2006年 第11期</h3>
+                <div class="issue-en">2006 · Issue No. 11</div>
+            </a>
+
+            <a href="reprints/2007-12.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 12</div>
+                <h3>2007年 第12期</h3>
+                <div class="issue-en">2007 · Issue No. 12</div>
+            </a>
+
+            <a href="reprints/2008-13.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 13</div>
+                <h3>2008年 第13期</h3>
+                <div class="issue-en">2008 · Issue No. 13</div>
+            </a>
+
+            <a href="reprints/2009-14.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 14</div>
+                <h3>2009年 第14期</h3>
+                <div class="issue-en">2009 · Issue No. 14</div>
+            </a>
+
+            <a href="reprints/2010-15.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 15</div>
+                <h3>2010年 第15期</h3>
+                <div class="issue-en">2010 · Issue No. 15</div>
+            </a>
+
+            <a href="reprints/2011-16.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 16</div>
+                <h3>2011年 第16期</h3>
+                <div class="issue-en">2011 · Issue No. 16</div>
+            </a>
+
+            <a href="reprints/2012-2013-17.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 17</div>
+                <h3>2012—2013年 第17期（合刊）</h3>
+                <div class="issue-en">2012–2013 · Combined Issue No. 17</div>
+            </a>
+
+            <a href="reprints/2014-18.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 18</div>
+                <h3>2014年 第18期</h3>
+                <div class="issue-en">2014 · Issue No. 18</div>
+            </a>
+
+            <a href="reprints/2015-19.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 19</div>
+                <h3>2015年 第19期</h3>
+                <div class="issue-en">2015 · Issue No. 19</div>
+            </a>
+
+            <a href="reprints/2016-20.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 20</div>
+                <h3>2016年 第20期</h3>
+                <div class="issue-en">2016 · Issue No. 20</div>
+            </a>
+
+            <a href="reprints/2017-21.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 21</div>
+                <h3>2017年 第21期</h3>
+                <div class="issue-en">2017 · Issue No. 21</div>
+            </a>
+
+            <a href="reprints/2018-22.pdf" target="_blank" class="issue-card">
+                <div class="issue-number">ISSUE 22</div>
+                <h3>2018年 第22期</h3>
+                <div class="issue-en">2018 · Issue No. 22</div>
+            </a>
 
         </div>
 
