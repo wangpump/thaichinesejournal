@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        出版伦理 | 泰中学刊 | Journal of Thai Chinese Studies
+    </title>
+
+    <meta
+        name="description"
+        content="《泰中学刊》出版伦理声明，包括作者、审稿人、编辑伦理责任，学术不端处理、版权开放获取及投诉申诉机制。"
+    >
+
+    <style>
+
+        :root {
+            --paper: #F5EFE3;
+            --paper-light: #FBF7EF;
+            --red: #7A1F1F;
+            --red-light: #8B2E2E;
+            --deep-red: #4E1717;
+            --gold: #A67C32;
+            --bronze: #8C6A2F;
+            --text: #3A2E28;
+            --muted: #75675C;
+            --border: #D8C6A4;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--paper);
+            color: var(--text);
+            font-family:
+                "Noto Serif SC",
+                "Songti SC",
+                "STSong",
+                "SimSun",
+                serif;
+            line-height: 1.9;
+        }
+
+        /* Logo */
+
+        .journal-header {
+            background: var(--paper-light);
+            text-align: center;
+            padding: 28px 20px 20px;
+        }
+
+        .journal-logo {
+            width: 520px;
+            max-width: 92%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 导航栏 */
+
+        .main-nav {
+            background: var(--red);
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .main-nav ul {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .main-nav li {
+            flex: 1;
+            text-align: center;
+        }
+
+        .main-nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 72px;
+            padding: 10px 5px;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .main-nav a:hover {
+            background: var(--red-light);
+        }
+
+        .main-nav .en {
+            display: block;
+            margin-top: 2px;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 9px;
+            opacity: 0.82;
+        }
+
+        /* 页面标题 */
+
+        .hero {
+            background: var(--paper-light);
+            padding: 65px 30px 50px;
+        }
+
+        .hero-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-kicker {
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 15px;
+            letter-spacing: 1.8px;
+            margin-bottom: 6px;
+        }
+
+        .hero h1 {
+            color: var(--red);
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .hero-en {
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 21px;
+            margin-bottom: 26px;
+        }
+
+        .gold-divider {
+            width: 70px;
+            height: 3px;
+            background: var(--gold);
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 920px;
+            font-size: 16px;
+            line-height: 2;
+            text-align: justify;
+            text-indent: 2em;
+        }
+
+        /* 主体 */
+
+        .ethics-section {
+            padding: 60px 30px 80px;
+        }
+
+        .ethics-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .ethics-card {
+            background: var(--paper-light);
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--red);
+            padding: 34px 38px;
+            margin-bottom: 26px;
+            box-shadow:
+                0 6px 18px
+                rgba(70, 40, 20, 0.05);
+        }
+
+        .ethics-card h2 {
+            color: var(--red);
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .ethics-card p {
+            font-size: 16px;
+            line-height: 2;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .ethics-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .ethics-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .ethics-list li {
+            position: relative;
+            padding-left: 1.5em;
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 2;
+            text-align: justify;
+        }
+
+        .ethics-list li::before {
+            content: "◆";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--gold);
+            font-size: 10px;
+        }
+
+        .ethics-list strong {
+            color: var(--red);
+        }
+
+        .sub-list {
+            margin-top: 10px;
+            margin-left: 1.2em;
+            list-style: none;
+        }
+
+        .sub-list li {
+            padding-left: 0;
+            margin-bottom: 6px;
+        }
+
+        .sub-list li::before {
+            content: none;
+        }
+
+        .highlight-card {
+            background: var(--red);
+            color: var(--paper-light);
+            border-top: 5px solid var(--gold);
+            padding: 34px 38px;
+            margin-bottom: 26px;
+        }
+
+        .highlight-card h2 {
+            color: #E7CF98;
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+
+        .highlight-card p {
+            line-height: 2;
+            text-align: justify;
+        }
+
+        .signature {
+            max-width: 1000px;
+            margin: 35px auto 0;
+            text-align: right;
+            font-size: 15px;
+            line-height: 2;
+        }
+
+        /* Footer */
+
+        footer {
+            background: var(--deep-red);
+            color: #D9C59A;
+            text-align: center;
+            padding: 24px 15px;
+            border-top: 3px solid var(--gold);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 12px;
+        }
+
+        /* 响应式 */
+
+        @media (max-width: 900px) {
+
+            .main-nav ul {
+                flex-wrap: wrap;
+            }
+
+            .main-nav li {
+                flex: 0 0 25%;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .journal-logo {
+                width: 95%;
+            }
+
+            .main-nav li {
+                flex: 0 0 50%;
+            }
+
+            .hero {
+                padding: 45px 22px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .ethics-section {
+                padding: 40px 18px 60px;
+            }
+
+            .ethics-card,
+            .highlight-card {
+                padding: 28px 22px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header class="journal-header">
+
+    <img
+        src="logo.png"
+        alt="泰中学刊 Journal of Thai Chinese Studies"
+        class="journal-logo"
+    >
+
+</header>
+
+<nav class="main-nav">
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                首页
+                <span class="en">Home</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="history.html">
+                过往历史
+                <span class="en">History</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="society.html">
+                泰中学会
+                <span class="en">Thai-Chinese Society</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="editorial-board.html">
+                学刊编委
+                <span class="en">Editorial Board</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="submission.html">
+                投稿指南
+                <span class="en">Submission Guidelines</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="ethics.html">
+                出版伦理
+                <span class="en">Publication Ethics</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html">
+                联系我们
+                <span class="en">Contact</span>
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div class="section-kicker">
+            PUBLICATION ETHICS
+        </div>
+
+        <h1>
+            《泰中学刊》出版伦理声明
+        </h1>
+
+        <div class="hero-en">
+            Publication Ethics Statement
+        </div>
+
+        <div class="gold-divider"></div>
+
+        <p>
+            《泰中学刊》严格遵守国际学术出版伦理规范，参照国际出版伦理委员会的相关准则，制定本出版伦理声明。本刊所有编辑、编委、审稿人及作者均须遵守以下规定。
+        </p>
+
+    </div>
+
+</section>
+
+<section class="ethics-section">
+
+    <div class="ethics-inner">
+
+        <!-- 一 -->
+
+        <div class="ethics-card">
+
+            <h2>
+                一、作者伦理责任
+            </h2>
+
+            <ul class="ethics-list">
+
+                <li>
+                    <strong>1. 原创性声明：</strong>
+                    作者须保证所投稿件为本人原创研究成果，不存在抄袭、剽窃、伪造数据等学术不端行为。引用他人研究成果时，须以规范的注释或参考文献形式明确标注出处。
+                </li>
+
+                <li>
+                    <strong>2. 一稿一投：</strong>
+                    投稿稿件不得同时投递其他期刊或出版物。稿件在《泰中学刊》审稿期间，未经编辑部书面同意，不得撤回后另投他刊。
+                </li>
+
+                <li>
+                    <strong>3. 利益冲突声明：</strong>
+                    作者须在投稿时如实披露可能影响研究客观性的利益关系，包括但不限于经济利益、学术竞争关系、机构资助关系等。
+                </li>
+
+                <li>
+                    <strong>4. 署名规范：</strong>
+                    所有署名作者须对论文内容有实质性贡献，并同意最终版本的发表。不得将未参与研究的人员列为作者，也不得遗漏有实质性贡献的研究者。
+                </li>
+
+                <li>
+                    <strong>5. 数据真实性：</strong>
+                    作者须保证论文中引用的数据、图表、案例等资料真实可靠，不得篡改、捏造或选择性使用数据。
+                </li>
+
+                <li>
+                    <strong>6. 重复发表：</strong>
+                    已公开发表的成果不得再次投稿。如确需基于已发表成果进行延伸研究，须在投稿时说明并与前作进行明确区分。
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- 二 -->
+
+        <div class="ethics-card">
+
+            <h2>
+                二、审稿人伦理责任
+            </h2>
+
+            <ul class="ethics-list">
+
+                <li>
+                    <strong>1. 客观公正：</strong>
+                    审稿人须以学术质量为唯一评判标准，对稿件作出客观、公正、建设性的评价，不得因作者的国籍、性别、机构、学术立场等因素产生偏见。
+                </li>
+
+                <li>
+                    <strong>2. 保密义务：</strong>
+                    审稿人须对审稿过程中接触到的稿件内容严格保密，不得将稿件内容透露给第三方，也不得利用稿件中的学术思想谋取个人利益。
+                </li>
+
+                <li>
+                    <strong>3. 利益回避：</strong>
+                    审稿人如与作者存在利益冲突（如合作关系、师生关系、竞争关系等），须主动向编辑部声明并申请回避。
+                </li>
+
+                <li>
+                    <strong>4. 及时审稿：</strong>
+                    审稿人须在约定时间内完成审稿工作。如因个人原因无法按时完成，应及时通知编辑部，以便编辑部另行安排审稿人。
+                </li>
+
+                <li>
+                    <strong>5. 尊重知识产权：</strong>
+                    审稿人不得将未发表稿件中的学术观点、研究方法或数据据为己有，或用于自己的研究之中。
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- 三 -->
+
+        <div class="ethics-card">
+
+            <h2>
+                三、编辑伦理责任
+            </h2>
+
+            <ul class="ethics-list">
+
+                <li>
+                    <strong>1. 公正决策：</strong>
+                    编辑须以学术质量为唯一标准决定稿件的录用与否，不得因作者的身份、机构、国籍、种族、性别、宗教信仰等因素作出不公正判断。
+                </li>
+
+                <li>
+                    <strong>2. 保密义务：</strong>
+                    编辑须对审稿过程中的稿件内容、审稿人身份及审稿意见严格保密，未经作者和审稿人同意，不得向第三方披露。
+                </li>
+
+                <li>
+                    <strong>3. 利益回避：</strong>
+                    编辑如与投稿作者存在利益冲突，须将该稿件交由其他编辑处理，不得参与该稿件的审稿与决策过程。
+                </li>
+
+                <li>
+                    <strong>4. 尊重审稿意见：</strong>
+                    编辑须充分尊重审稿人的专业意见，在作出录用或退稿决定时，须综合考虑审稿人的评价，不得无故推翻审稿结论。
+                </li>
+
+                <li>
+                    <strong>5. 及时处理：</strong>
+                    编辑须在合理时间内完成稿件的初审、送审及反馈工作，不得无故拖延审稿周期。
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- 四 -->
+
+        <div class="ethics-card">
+
+            <h2>
+                四、学术不端处理
+            </h2>
+
+            <ul class="ethics-list">
+
+                <li>
+                    <strong>1. 检测机制：</strong>
+                    本刊将采用学术不端检测系统对投稿稿件进行查重检测，并对疑似学术不端行为进行进一步核查。
+                </li>
+
+                <li>
+                    <strong>2. 处理程序：</strong>
+                    一旦发现学术不端行为，编辑部将启动调查程序，听取作者申辩，并根据调查结果作出相应处理。
+                </li>
+
+                <li>
+                    <strong>3. 处理措施：</strong>
+                    根据学术不端行为的严重程度，本刊将采取以下一种或多种处理措施：
+
+                    <ul class="sub-list">
+                        <li>（1）退稿处理；</li>
+                        <li>（2）在刊物上发布撤稿声明；</li>
+                        <li>（3）通知作者所在单位或资助机构；</li>
+                        <li>（4）在一定期限内拒绝接受该作者的投稿；</li>
+                        <li>（5）更正与撤稿：已发表的论文如被发现存在严重错误或学术不端行为，本刊将及时发布更正声明或撤稿声明，并说明原因。</li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- 五 -->
+
+        <div class="ethics-card">
+
+            <h2>
+                五、版权与开放获取
+            </h2>
+
+            <ul class="ethics-list">
+
+                <li>
+                    <strong>1. 版权转让：</strong>
+                    稿件一经录用，作者须签署《版权转让协议》，将稿件的出版权、网络传播权等权利授予《泰中学刊》编辑部。
+                </li>
+
+                <li>
+                    <strong>2. 作者权益：</strong>
+                    作者保留稿件的署名权及学术使用权，可在征得编辑部同意后，将稿件收录于个人学术成果集或教学材料中。
+                </li>
+
+                <li>
+                    <strong>3. 开放获取：</strong>
+                    本刊积极推进开放获取（OA）出版，录用稿件将在数字化平台免费向公众开放，以促进学术成果的广泛传播与共享。
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- 六 -->
+
+        <div class="ethics-card">
+
+            <h2>
+                六、投诉与申诉
+            </h2>
+
+            <p>
+                如作者、审稿人或其他相关方对编辑部的决定或处理结果有异议，可向编辑部提出书面申诉。编辑部将在收到申诉后30个工作日内作出书面回复。
+            </p>
+
+        </div>
+
+        <!-- 七 -->
+
+        <div class="highlight-card">
+
+            <h2>
+                七、附则
+            </h2>
+
+            <p>
+                本出版伦理声明自发布之日起生效，适用于《泰中学刊》所有投稿、审稿及出版活动。本声明的解释权归《泰中学刊》编辑部及泰中学会（香港）有限公司所有。
+            </p>
+
+        </div>
+
+        <div class="signature">
+
+            <div>
+                《泰中学刊》编辑部
+            </div>
+
+            <div>
+                2026年8月
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+
+    © 2026 Journal of Thai Chinese Studies
+
+</footer>
+
+</body>
+
+</html>
