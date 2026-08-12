@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        学刊编委 | 泰中学刊 | Journal of Thai Chinese Studies
+    </title>
+
+    <meta
+        name="description"
+        content="《泰中学刊》编委会及编辑部成员信息。"
+    >
+
+    <style>
+
+        :root {
+            --paper: #F5EFE3;
+            --paper-light: #FBF7EF;
+            --red: #7A1F1F;
+            --red-light: #8B2E2E;
+            --deep-red: #4E1717;
+            --gold: #A67C32;
+            --bronze: #8C6A2F;
+            --text: #3A2E28;
+            --muted: #75675C;
+            --border: #D8C6A4;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: var(--paper);
+            color: var(--text);
+            font-family:
+                "Noto Serif SC",
+                "Songti SC",
+                "STSong",
+                "SimSun",
+                serif;
+            line-height: 1.85;
+        }
+
+        /* ==============================
+           Logo
+        ============================== */
+
+        .journal-header {
+            background: var(--paper-light);
+            text-align: center;
+            padding: 28px 20px 20px;
+        }
+
+        .journal-logo {
+            width: 520px;
+            max-width: 92%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* ==============================
+           导航栏
+        ============================== */
+
+        .main-nav {
+            background: var(--red);
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .main-nav ul {
+            max-width: 1250px;
+            margin: 0 auto;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            padding: 0;
+        }
+
+        .main-nav li {
+            flex: 1;
+            text-align: center;
+        }
+
+        .main-nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 72px;
+            padding: 10px 5px;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .main-nav a:hover {
+            background: var(--red-light);
+        }
+
+        .main-nav .en {
+            display: block;
+            margin-top: 2px;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 9px;
+            opacity: 0.82;
+        }
+
+        /* ==============================
+           页面标题
+        ============================== */
+
+        .hero {
+            background: var(--paper-light);
+            padding: 65px 30px 50px;
+        }
+
+        .hero-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-kicker {
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 15px;
+            letter-spacing: 1.8px;
+            margin-bottom: 6px;
+        }
+
+        .hero h1 {
+            color: var(--red);
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .hero-en {
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 21px;
+            margin-bottom: 26px;
+        }
+
+        .gold-divider {
+            width: 70px;
+            height: 3px;
+            background: var(--gold);
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 900px;
+            font-size: 16px;
+            line-height: 2;
+            text-align: justify;
+        }
+
+        /* ==============================
+           内容区域
+        ============================== */
+
+        .board-section {
+            padding: 65px 30px 75px;
+        }
+
+        .board-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .board-card {
+            background: var(--paper-light);
+            border: 1px solid var(--border);
+            border-top: 5px solid var(--red);
+            padding: 40px 42px 35px;
+            margin-bottom: 35px;
+            box-shadow:
+                0 8px 25px
+                rgba(70, 40, 20, 0.06);
+        }
+
+        .board-card h2 {
+            color: var(--red);
+            font-size: 28px;
+            margin-bottom: 4px;
+        }
+
+        .board-card .en-title {
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        .role-row {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 25px;
+            padding: 18px 0;
+            border-bottom: 1px solid #DCCCAD;
+        }
+
+        .role-row:last-child {
+            border-bottom: none;
+        }
+
+        .role-title {
+            color: var(--red);
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .role-title span {
+            display: block;
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 11px;
+            font-weight: normal;
+            margin-top: 2px;
+        }
+
+        .role-names {
+            font-size: 17px;
+            line-height: 1.9;
+            color: var(--text);
+        }
+
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px 22px;
+        }
+
+        .member {
+            padding: 7px 0;
+            color: var(--text);
+        }
+
+        /* ==============================
+           说明
+        ============================== */
+
+        .note-section {
+            background: var(--paper-light);
+            padding: 50px 30px 60px;
+        }
+
+        .note-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .note-inner strong {
+            color: var(--red);
+        }
+
+        /* ==============================
+           Footer
+        ============================== */
+
+        footer {
+            background: var(--deep-red);
+            color: #D9C59A;
+            text-align: center;
+            padding: 24px 15px;
+            border-top: 3px solid var(--gold);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 12px;
+        }
+
+        /* ==============================
+           响应式
+        ============================== */
+
+        @media (max-width: 900px) {
+
+            .main-nav ul {
+                flex-wrap: wrap;
+            }
+
+            .main-nav li {
+                flex: 0 0 25%;
+            }
+
+            .members-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .journal-logo {
+                width: 95%;
+            }
+
+            .main-nav li {
+                flex: 0 0 50%;
+            }
+
+            .hero {
+                padding: 45px 22px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .board-section {
+                padding: 45px 18px;
+            }
+
+            .board-card {
+                padding: 30px 22px;
+            }
+
+            .role-row {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .members-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header class="journal-header">
+
+    <img
+        src="logo.png"
+        alt="泰中学刊 Journal of Thai Chinese Studies"
+        class="journal-logo"
+    >
+
+</header>
+
+<nav class="main-nav">
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                首页
+                <span class="en">Home</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="history.html">
+                过往历史
+                <span class="en">History</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="society.html">
+                泰中学会
+                <span class="en">Thai-Chinese Society</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="editorial-board.html">
+                学刊编委
+                <span class="en">Editorial Board</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="submission.html">
+                投稿指南
+                <span class="en">Submission Guidelines</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="ethics.html">
+                出版伦理
+                <span class="en">Publication Ethics</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html">
+                联系我们
+                <span class="en">Contact</span>
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div class="section-kicker">
+            EDITORIAL BOARD
+        </div>
+
+        <h1>
+            学刊编委
+        </h1>
+
+        <div class="hero-en">
+            Editorial Board
+        </div>
+
+        <div class="gold-divider"></div>
+
+        <p>
+            《泰中学刊》编委会及编辑部负责学刊的学术规划、稿件组织、同行评议、编辑出版及相关学术事务。以下为筹备阶段人员构成。
+        </p>
+
+    </div>
+
+</section>
+
+<section class="board-section">
+
+    <div class="board-inner">
+
+        <!-- 编委会 -->
+
+        <div class="board-card">
+
+            <h2>
+                《泰中学刊》编委会（筹）
+            </h2>
+
+            <div class="en-title">
+                Editorial Board (Preparatory)
+            </div>
+
+            <div class="role-row">
+
+                <div class="role-title">
+                    名誉主任
+                    <span>Honorary Directors</span>
+                </div>
+
+                <div class="role-names">
+                    黎道刚、庄国土
+                </div>
+
+            </div>
+
+            <div class="role-row">
+
+                <div class="role-title">
+                    主任
+                    <span>Director</span>
+                </div>
+
+                <div class="role-names">
+                    王天松
+                </div>
+
+            </div>
+
+            <div class="role-row">
+
+                <div class="role-title">
+                    副主任
+                    <span>Deputy Directors</span>
+                </div>
+
+                <div class="role-names">
+                    罗建平、钟大荣、王斌
+                </div>
+
+            </div>
+
+            <div class="role-row">
+
+                <div class="role-title">
+                    委员
+                    <span>Members</span>
+                </div>
+
+                <div class="role-names">
+
+                    <div class="members-grid">
+
+                        <div class="member">刘文正</div>
+                        <div class="member">张禹东</div>
+                        <div class="member">郑文标</div>
+                        <div class="member">陈景熙</div>
+                        <div class="member">张晶盈</div>
+                        <div class="member">胡建刚</div>
+                        <div class="member">胡燕华</div>
+                        <div class="member">杨楹</div>
+                        <div class="member">杨少涵</div>
+                        <div class="member">赵峥</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 编辑部 -->
+
+        <div class="board-card">
+
+            <h2>
+                《泰中学刊》编辑部（筹）
+            </h2>
+
+            <div class="en-title">
+                Editorial Office (Preparatory)
+            </div>
+
+            <div class="role-row">
+
+                <div class="role-title">
+                    主编
+                    <span>Editor-in-Chief</span>
+                </div>
+
+                <div class="role-names">
+                    罗建平
+                </div>
+
+            </div>
+
+            <div class="role-row">
+
+                <div class="role-title">
+                    副主编
+                    <span>Deputy Editors-in-Chief</span>
+                </div>
+
+                <div class="role-names">
+                    王天松、钟大荣、王斌
+                </div>
+
+            </div>
+
+            <div class="role-row">
+
+                <div class="role-title">
+                    责任编辑
+                    <span>Responsible Editor</span>
+                </div>
+
+                <div class="role-names">
+                    王斌
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="note-section">
+
+    <div class="note-inner">
+
+        <strong>说明：</strong>
+        “（筹）”表示目前为筹备阶段人员构成，后续如有调整，以《泰中学刊》官方网站公布的最新名单为准。
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+
+    © 2026 Journal of Thai Chinese Studies
+
+</footer>
+
+</body>
+
+</html>
