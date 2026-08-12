@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        经典重刊 | 泰中学刊 | Journal of Thai Chinese Studies
+    </title>
+
+    <meta
+        name="description"
+        content="《泰中学刊》经典重刊页面，收录历期目录、历史整期重刊及经典文章重刊资料。"
+    >
+
+    <style>
+
+        :root {
+            --paper: #F5EFE3;
+            --paper-light: #FBF7EF;
+            --red: #7A1F1F;
+            --red-light: #8B2E2E;
+            --deep-red: #4E1717;
+            --gold: #A67C32;
+            --bronze: #8C6A2F;
+            --text: #3A2E28;
+            --muted: #75675C;
+            --border: #D8C6A4;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: var(--paper);
+            color: var(--text);
+            font-family:
+                "Noto Serif SC",
+                "Songti SC",
+                "STSong",
+                "SimSun",
+                serif;
+            line-height: 1.85;
+        }
+
+        .journal-header {
+            background: var(--paper-light);
+            text-align: center;
+            padding: 28px 20px 20px;
+        }
+
+        .journal-logo {
+            width: 520px;
+            max-width: 92%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .main-nav {
+            background: var(--red);
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .main-nav ul {
+            max-width: 1250px;
+            margin: 0 auto;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            padding: 0;
+        }
+
+        .main-nav li {
+            flex: 1;
+            text-align: center;
+        }
+
+        .main-nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 72px;
+            padding: 10px 5px;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .main-nav a:hover {
+            background: var(--red-light);
+        }
+
+        .main-nav .en {
+            display: block;
+            margin-top: 2px;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 9px;
+            opacity: 0.82;
+        }
+
+        .hero {
+            background: var(--paper-light);
+            padding: 65px 30px 52px;
+        }
+
+        .hero-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-kicker {
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 15px;
+            letter-spacing: 1.8px;
+            margin-bottom: 6px;
+        }
+
+        .hero h1 {
+            color: var(--red);
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .hero-en {
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 21px;
+            margin-bottom: 26px;
+        }
+
+        .gold-divider {
+            width: 70px;
+            height: 3px;
+            background: var(--gold);
+            margin-bottom: 27px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            line-height: 2;
+            text-align: justify;
+            text-indent: 2em;
+        }
+
+        .archive-section {
+            padding: 65px 30px 75px;
+        }
+
+        .archive-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .archive-card {
+            background: var(--paper-light);
+            border: 1px solid var(--border);
+            border-top: 5px solid var(--red);
+            padding: 40px 42px;
+            box-shadow:
+                0 8px 25px
+                rgba(70, 40, 20, 0.07);
+        }
+
+        .archive-label {
+            color: var(--gold);
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .archive-card h2 {
+            color: var(--red);
+            font-size: 27px;
+            margin-bottom: 4px;
+        }
+
+        .archive-card .en {
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 15px;
+            margin-bottom: 22px;
+        }
+
+        .archive-card p {
+            font-size: 16px;
+            line-height: 2;
+            text-align: justify;
+            margin-bottom: 24px;
+        }
+
+        .pdf-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--red);
+            color: #fff;
+            text-decoration: none;
+            border: 1px solid var(--gold);
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .pdf-button:hover {
+            background: var(--red-light);
+            transform: translateY(-2px);
+        }
+
+        .future-section {
+            background: var(--paper-light);
+            padding: 60px 30px 70px;
+        }
+
+        .future-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .future-inner h2 {
+            color: var(--red);
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .future-inner .en {
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            margin-bottom: 28px;
+        }
+
+        .future-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .future-card {
+            border: 1px solid var(--border);
+            background: var(--paper);
+            padding: 30px;
+        }
+
+        .future-card h3 {
+            color: var(--red);
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+
+        .future-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        footer {
+            background: var(--deep-red);
+            color: #D9C59A;
+            text-align: center;
+            padding: 24px 15px;
+            border-top: 3px solid var(--gold);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 12px;
+        }
+
+        @media (max-width: 900px) {
+
+            .main-nav ul {
+                flex-wrap: wrap;
+            }
+
+            .main-nav li {
+                flex: 0 0 25%;
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            .journal-logo {
+                width: 95%;
+            }
+
+            .main-nav li {
+                flex: 0 0 50%;
+            }
+
+            .hero {
+                padding: 45px 22px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .archive-section {
+                padding: 45px 18px;
+            }
+
+            .archive-card {
+                padding: 30px 22px;
+            }
+
+            .future-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header class="journal-header">
+
+    <img
+        src="logo.png"
+        alt="泰中学刊 Journal of Thai Chinese Studies"
+        class="journal-logo"
+    >
+
+</header>
+
+<nav class="main-nav">
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                首页
+                <span class="en">Home</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="history.html">
+                过往历史
+                <span class="en">History</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="society.html">
+                泰中学会
+                <span class="en">Thai-Chinese Society</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="editorial-board.html">
+                学刊编委
+                <span class="en">Editorial Board</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="submission.html">
+                投稿指南
+                <span class="en">Submission Guidelines</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="ethics.html">
+                出版伦理
+                <span class="en">Publication Ethics</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html">
+                联系我们
+                <span class="en">Contact</span>
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div class="section-kicker">
+            CLASSIC REPRINTS
+        </div>
+
+        <h1>
+            经典重刊
+        </h1>
+
+        <div class="hero-en">
+            Classic Reprints
+        </div>
+
+        <div class="gold-divider"></div>
+
+        <p>
+            “经典重刊”栏目主要整理并重新发布《泰中学刊》历史刊物、经典学术论文及具有重要资料价值的文献内容。重刊资料原则上保留原作者、原刊期次、原始出版时间及原有学术归属，并根据数字化出版需要进行必要的整理与说明。
+        </p>
+
+    </div>
+
+</section>
+
+<section class="archive-section">
+
+    <div class="archive-inner">
+
+        <div class="archive-card">
+
+            <div class="archive-label">
+                ARCHIVE OF ISSUES
+            </div>
+
+            <h2>
+                《泰中学刊》历期目录
+            </h2>
+
+            <div class="en">
+                Table of Contents of All Issues
+            </div>
+
+            <p>
+                本资料汇集《泰中学刊》历年已出版刊物的目录信息，为读者查阅历史刊期、文章题目、作者及相关研究资料提供索引。后续将逐步补充历史整期刊物、单篇经典文章及数字化重刊资料。
+            </p>
+
+            <a
+                href="reprints/all-issues-table-of-contents.pdf"
+                target="_blank"
+                class="pdf-button"
+            >
+                查看历期目录 PDF
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="future-section">
+
+    <div class="future-inner">
+
+        <h2>
+            重刊资料
+        </h2>
+
+        <div class="en">
+            Reprint Archive
+        </div>
+
+        <div class="future-grid">
+
+            <div class="future-card">
+
+                <h3>
+                    历史整期重刊
+                </h3>
+
+                <p>
+                    后续将按原出版年份与刊期，逐步整理并发布《泰中学刊》历史整期 PDF 资料。
+                </p>
+
+            </div>
+
+            <div class="future-card">
+
+                <h3>
+                    经典文章重刊
+                </h3>
+
+                <p>
+                    选取具有持续学术价值和重要史料价值的经典文章，保留原始出版信息并进行数字化重刊。
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+
+    © 2026 Journal of Thai Chinese Studies
+
+</footer>
+
+</body>
+
+</html>
