@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        泰中学会 | 泰中学刊 | Journal of Thai Chinese Studies
+    </title>
+
+    <meta
+        name="description"
+        content="泰中学会组织架构、学会章程、历届学会成员及历届学会资料。"
+    >
+
+    <style>
+
+        :root {
+            --paper: #F5EFE3;
+            --paper-light: #FBF7EF;
+            --red: #7A1F1F;
+            --red-light: #8B2E2E;
+            --deep-red: #4E1717;
+            --gold: #A67C32;
+            --bronze: #8C6A2F;
+            --text: #2F2925;
+            --muted: #75675C;
+            --border: #D8C6A4;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--paper);
+            color: var(--text);
+            font-family:
+                "Noto Serif SC",
+                "Source Han Serif SC",
+                "Songti SC",
+                "STSong",
+                "SimSun",
+                serif;
+            line-height: 1.9;
+        }
+
+        /* 顶部 Logo */
+
+        .journal-header {
+            background: var(--paper-light);
+            text-align: center;
+            padding: 28px 20px 20px;
+        }
+
+        .journal-logo {
+            width: 520px;
+            max-width: 92%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 导航栏 */
+
+        .main-nav {
+            background: var(--red);
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .main-nav ul {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .main-nav li {
+            flex: 1;
+            text-align: center;
+        }
+
+        .main-nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 72px;
+            padding: 10px 5px;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .main-nav a:hover {
+            background: var(--red-light);
+        }
+
+        .main-nav .en {
+            display: block;
+            margin-top: 2px;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 9px;
+            opacity: 0.82;
+        }
+
+        /* 页面标题 */
+
+        .hero {
+            background: var(--paper-light);
+            padding: 65px 30px 50px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-kicker {
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 15px;
+            letter-spacing: 1.8px;
+            margin-bottom: 6px;
+        }
+
+        .hero h1 {
+            color: var(--red);
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .hero-en {
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .gold-divider {
+            width: 70px;
+            height: 3px;
+            background: var(--gold);
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 900px;
+            font-size: 16px;
+            line-height: 2;
+            text-align: justify;
+            text-indent: 2em;
+        }
+
+        /* 四个入口 */
+
+        .portal-section {
+            padding: 60px 30px 70px;
+        }
+
+        .portal-inner {
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .section-heading h2 {
+            color: var(--red);
+            font-size: 28px;
+            margin-bottom: 4px;
+        }
+
+        .section-heading p {
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 14px;
+        }
+
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .portal-card {
+            background: var(--paper-light);
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--gold);
+            padding: 30px 28px;
+            text-decoration: none;
+            color: var(--text);
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .portal-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--red);
+            box-shadow:
+                0 8px 22px
+                rgba(70, 40, 20, 0.08);
+        }
+
+        .portal-card h3 {
+            color: var(--red);
+            font-size: 21px;
+            margin-bottom: 4px;
+        }
+
+        .portal-card .en {
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .portal-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* 组织架构 */
+
+        .organization-section {
+            background: var(--paper-light);
+            padding: 60px 30px 75px;
+        }
+
+        .organization-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .organization-card {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-top: 5px solid var(--red);
+            padding: 38px 42px;
+        }
+
+        .organization-card h2 {
+            color: var(--red);
+            font-size: 27px;
+            margin-bottom: 4px;
+        }
+
+        .organization-card .en-title {
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        .role-row {
+            display: grid;
+            grid-template-columns: 170px 1fr;
+            gap: 24px;
+            padding: 18px 0;
+            border-bottom: 1px solid #DCCCAD;
+        }
+
+        .role-row:last-child {
+            border-bottom: none;
+        }
+
+        .role-title {
+            color: var(--red);
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .role-title span {
+            display: block;
+            margin-top: 2px;
+            color: var(--bronze);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 11px;
+            font-weight: normal;
+        }
+
+        .role-name {
+            font-size: 17px;
+            color: var(--text);
+            line-height: 1.9;
+        }
+
+        /* 页脚 */
+
+        footer {
+            background: var(--deep-red);
+            color: #D9C59A;
+            text-align: center;
+            padding: 24px 15px;
+            border-top: 3px solid var(--gold);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: 12px;
+        }
+
+        /* 响应式 */
+
+        @media (max-width: 900px) {
+
+            .main-nav ul {
+                flex-wrap: wrap;
+            }
+
+            .main-nav li {
+                flex: 0 0 25%;
+            }
+
+            .portal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .journal-logo {
+                width: 95%;
+            }
+
+            .main-nav li {
+                flex: 0 0 50%;
+            }
+
+            .hero {
+                padding: 45px 22px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .portal-section,
+            .organization-section {
+                padding:
+                    45px
+                    18px;
+            }
+
+            .organization-card {
+                padding:
+                    30px
+                    22px;
+            }
+
+            .role-row {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header class="journal-header">
+
+    <img
+        src="logo.png"
+        alt="泰中学刊 Journal of Thai Chinese Studies"
+        class="journal-logo"
+    >
+
+</header>
+
+<nav class="main-nav">
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                首页
+                <span class="en">Home</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="history.html">
+                过往历史
+                <span class="en">History</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="society.html">
+                泰中学会
+                <span class="en">Thai-Chinese Society</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="editorial-board.html">
+                学刊编委
+                <span class="en">Editorial Board</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="submission.html">
+                投稿指南
+                <span class="en">Submission Guidelines</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="ethics.html">
+                出版伦理
+                <span class="en">Publication Ethics</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html">
+                联系我们
+                <span class="en">Contact</span>
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div class="section-kicker">
+            THAI-CHINESE SOCIETY
+        </div>
+
+        <h1>
+            泰中学会
+        </h1>
+
+        <div class="hero-en">
+            Thai-Chinese Society
+        </div>
+
+        <div class="gold-divider"></div>
+
+        <p>
+            泰中学会以推动泰中文化研究、学术交流及民间友好为宗旨，长期关注泰国历史、中华文化、中泰关系、华侨华人及东南亚区域研究。学会自成立以来持续开展学术研究、文化交流、出版及相关社会文化活动，《泰中学刊》是学会重要的学术出版平台。
+        </p>
+
+    </div>
+
+</section>
+
+<section class="portal-section">
+
+    <div class="portal-inner">
+
+        <div class="section-heading">
+
+            <h2>
+                学会资料
+            </h2>
+
+            <p>
+                Society Information
+            </p>
+
+        </div>
+
+        <div class="portal-grid">
+
+            <a
+                href="#organization"
+                class="portal-card"
+            >
+
+                <h3>
+                    组织架构及人员
+                </h3>
+
+                <div class="en">
+                    Organization &amp; Members
+                </div>
+
+                <p>
+                    查看泰中学会现阶段组织架构及主要负责人信息。
+                </p>
+
+            </a>
+
+            <a
+                href="society-constitution.html"
+                class="portal-card"
+            >
+
+                <h3>
+                    学会章程
+                </h3>
+
+                <div class="en">
+                    Constitution
+                </div>
+
+                <p>
+                    查阅泰中学会章程、宗旨、组织制度及相关规定。
+                </p>
+
+            </a>
+
+            <a
+                href="society-members.html"
+                class="portal-card"
+            >
+
+                <h3>
+                    历届学会成员
+                </h3>
+
+                <div class="en">
+                    Former Members
+                </div>
+
+                <p>
+                    按年份倒序整理2018年至1992年历届学会成员资料。
+                </p>
+
+            </a>
+
+            <a
+                href="society-archives.html"
+                class="portal-card"
+            >
+
+                <h3>
+                    历届学会资料
+                </h3>
+
+                <div class="en">
+                    Historical Archives
+                </div>
+
+                <p>
+                    收录历届会议、活动、会务简报、图片及相关历史档案资料。
+                </p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section
+    class="organization-section"
+    id="organization"
+>
+
+    <div class="organization-inner">
+
+        <div class="organization-card">
+
+            <h2>
+                组织架构及人员
+            </h2>
+
+            <div class="en-title">
+                Organization &amp; Members
+            </div>
+
+            <div class="role-row">
+
+                <div class="role-title">
+                    名誉会长
+                    <span>Honorary President</span>
+                </div>
+
+                <div class="role-name">
+                    黎道纲
+                </div>
+
+            </div>
+
+            <div class="role-row">
+
+                <div class="role-title">
+                    会长
+                    <span>President</span>
+                </div>
+
+                <div class="role-name">
+                    王天松
+                </div>
+
+            </div>
+
+            <div class="role-row">
+
+                <div class="role-title">
+                    副会长
+                    <span>Vice President</span>
+                </div>
+
+                <div class="role-name">
+                    罗建平
+                </div>
+
+            </div>
+
+            <div class="role-row">
+
+                <div class="role-title">
+                    副会长
+                    <span>Vice President</span>
+                </div>
+
+                <div class="role-name">
+                    钟大荣
+                </div>
+
+            </div>
+
+            <div class="role-row">
+
+                <div class="role-title">
+                    副会长兼秘书长
+                    <span>Vice President &amp; Secretary-General</span>
+                </div>
+
+                <div class="role-name">
+                    王也之
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+
+    © 2026 Journal of Thai Chinese Studies
+
+</footer>
+
+</body>
+
+</html>
