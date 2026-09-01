@@ -3,589 +3,1159 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-    <title>
-        过往历史 | 泰中学刊
-    </title>
+<title>
+    过往历史 | 泰中学刊 | Journal of Thai Chinese Studies
+</title>
 
-    <meta
-        name="description"
-        content="《泰中学刊》过往历史与泰中学会发展历程。"
-    >
+<meta
+    name="description"
+    content="《泰中学刊》及泰中学会历史沿革、创刊、发展及2026年复刊历程。"
+>
 
-    <style>
+<style>
 
-        :root {
-            --paper: #F5EFE3;
-            --paper-light: #FBF7EF;
-            --red: #7A1F1F;
-            --red-light: #8B2E2E;
-            --gold: #A67C32;
-            --bronze: #8C6A2F;
-            --text: #3A2E28;
-            --muted: #75675C;
-            --white: #FFFFFF;
-        }
+:root {
+    --paper:#F5EFE3;
+    --paper-light:#FBF7EF;
+    --red:#7A1F1F;
+    --red-light:#8B2E2E;
+    --deep-red:#4E1717;
+    --gold:#A67C32;
+    --bronze:#8C6A2F;
+    --text:#3A2E28;
+    --muted:#75675C;
+    --border:#D8C6A4;
+    --white:#FFFFFF;
+}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-        body {
-            background: var(--paper);
-            color: var(--text);
-            font-family:
-                "Noto Serif SC",
-                "Songti SC",
-                "STSong",
-                "SimSun",
-                serif;
-            line-height: 1.9;
-        }
+html {
+    scroll-behavior:smooth;
+}
 
-        .journal-header {
-            background: var(--paper-light);
-            text-align: center;
-            padding: 30px 20px 22px;
-        }
+body {
+    background:var(--paper);
+    color:var(--text);
 
-        .journal-logo {
-            width: 520px;
-            max-width: 92%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
+    font-family:
+        "Noto Serif SC",
+        "Source Han Serif SC",
+        "Songti SC",
+        "STSong",
+        "SimSun",
+        serif;
 
-        .main-nav {
-            background: var(--red);
-            border-top: 3px solid var(--gold);
-            border-bottom: 3px solid var(--gold);
-        }
+    line-height:1.9;
+}
 
-        .main-nav ul {
-            max-width: 1200px;
-            margin: 0 auto;
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            align-items: stretch;
-        }
 
-        .main-nav li {
-            flex: 1;
-            text-align: center;
-        }
+/* =====================================
+   Logo
+===================================== */
 
-        .main-nav a {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 72px;
-            padding: 10px 6px;
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
+.journal-header {
+    background:var(--paper-light);
+    text-align:center;
 
-        .main-nav a:hover {
-            background: var(--red-light);
-        }
+    padding:
+        28px
+        20px
+        20px;
+}
 
-        .main-nav .en {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 10px;
-            margin-top: 2px;
-            opacity: 0.8;
-        }
+.journal-logo {
+    width:520px;
+    max-width:92%;
+    height:auto;
 
-        .history-hero {
-            background: var(--paper-light);
-            padding: 70px 30px 55px;
-        }
+    display:block;
+    margin:0 auto;
+}
 
-        .history-inner {
-            max-width: 980px;
-            margin: 0 auto;
-        }
 
-        .section-kicker {
-            color: var(--bronze);
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 15px;
-            letter-spacing: 1.8px;
-            margin-bottom: 6px;
-        }
+/* =====================================
+   导航栏
+===================================== */
 
-        .history-hero h1 {
-            color: var(--red);
-            font-size: 36px;
-            margin-bottom: 4px;
-        }
+.main-nav {
+    background:var(--red);
 
-        .history-en {
-            color: var(--bronze);
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 21px;
-            margin-bottom: 26px;
-        }
+    border-top:
+        3px solid var(--gold);
 
-        .gold-divider {
-            width: 70px;
-            height: 3px;
-            background: var(--gold);
-            margin-bottom: 30px;
-        }
+    border-bottom:
+        3px solid var(--gold);
+}
 
-        .history-intro {
-            font-size: 17px;
-            text-align: justify;
-            text-indent: 2em;
-        }
+.main-nav ul {
+    max-width:1250px;
 
-        .timeline-section {
-            padding: 70px 30px;
-        }
+    margin:0 auto;
+    padding:0;
 
-        .timeline {
-            max-width: 980px;
-            margin: 0 auto;
-            position: relative;
-        }
+    list-style:none;
 
-        .timeline::before {
-            content: "";
-            position: absolute;
-            left: 110px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--gold);
-        }
+    display:flex;
 
-        .timeline-item {
-            display: grid;
-            grid-template-columns: 90px 1fr;
-            gap: 40px;
-            margin-bottom: 42px;
-            position: relative;
-        }
+    justify-content:center;
+    align-items:stretch;
+}
 
-        .timeline-year {
-            color: var(--red);
-            font-size: 18px;
-            font-weight: 600;
-            text-align: right;
-            padding-top: 2px;
-        }
+.main-nav li {
+    flex:1;
+    text-align:center;
+}
 
-        .timeline-content {
-            background: var(--paper-light);
-            border: 1px solid #D9C8A8;
-            border-left: 4px solid var(--red);
-            padding: 24px 26px;
-            position: relative;
-        }
+.main-nav a {
+    display:flex;
 
-        .timeline-content::before {
-            content: "";
-            position: absolute;
-            left: -47px;
-            top: 28px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--red);
-            border: 3px solid var(--paper);
-        }
+    flex-direction:column;
 
-        .timeline-content h3 {
-            color: var(--red);
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
+    align-items:center;
+    justify-content:center;
 
-        .timeline-content p {
-            font-size: 16px;
-            text-align: justify;
-            text-indent: 2em;
-        }
+    min-height:72px;
 
-        .meaning-section {
-            background: var(--paper-light);
-            padding: 65px 30px;
-        }
+    padding:
+        10px
+        5px;
 
-        .meaning-box {
-            max-width: 980px;
-            margin: 0 auto;
-        }
+    color:var(--white);
 
-        .meaning-box h2 {
-            color: var(--red);
-            font-size: 28px;
-            margin-bottom: 8px;
-        }
+    text-decoration:none;
 
-        .meaning-box .en {
-            color: var(--bronze);
-            font-family: Georgia, "Times New Roman", serif;
-            margin-bottom: 25px;
-        }
+    font-size:15px;
+}
 
-        .meaning-box p {
-            font-size: 16px;
-            text-align: justify;
-            text-indent: 2em;
-            margin-bottom: 0.4em;
-        }
+.main-nav a:hover {
+    background:var(--red-light);
+}
 
-        .revival-section {
-            padding: 65px 30px 80px;
-        }
+.main-nav .en {
+    display:block;
 
-        .revival-box {
-            max-width: 980px;
-            margin: 0 auto;
-            border-top: 4px solid var(--gold);
-            background: var(--paper-light);
-            padding: 36px;
-        }
+    margin-top:2px;
 
-        .revival-box h2 {
-            color: var(--red);
-            font-size: 27px;
-            margin-bottom: 15px;
-        }
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-        .revival-box p {
-            text-align: justify;
-            text-indent: 2em;
-            font-size: 16px;
-        }
+    font-size:9px;
 
-        footer {
-            background: #4E1717;
-            color: #D9C59A;
-            text-align: center;
-            padding: 22px 15px;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 12px;
-        }
+    opacity:.82;
+}
 
-        @media (max-width: 800px) {
 
-            .main-nav ul {
-                flex-wrap: wrap;
-            }
+/* =====================================
+   页面标题
+===================================== */
 
-            .main-nav li {
-                flex: 0 0 50%;
-            }
+.history-hero {
+    background:var(--paper-light);
 
-            .timeline::before {
-                left: 18px;
-            }
+    padding:
+        65px
+        30px
+        50px;
 
-            .timeline-item {
-                display: block;
-                padding-left: 45px;
-            }
+    border-bottom:
+        1px solid var(--border);
+}
 
-            .timeline-year {
-                text-align: left;
-                margin-bottom: 8px;
-            }
+.history-inner {
+    max-width:1000px;
+    margin:0 auto;
+}
 
-            .timeline-content::before {
-                left: -35px;
-            }
-        }
+.section-kicker {
+    color:var(--bronze);
 
-    </style>
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:15px;
+
+    letter-spacing:1.8px;
+
+    margin-bottom:6px;
+}
+
+.history-hero h1 {
+    color:var(--red);
+
+    font-size:36px;
+
+    font-weight:700;
+
+    margin-bottom:4px;
+}
+
+.history-en {
+    color:var(--bronze);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:21px;
+
+    margin-bottom:26px;
+}
+
+.gold-divider {
+    width:70px;
+    height:3px;
+
+    background:var(--gold);
+
+    margin-bottom:25px;
+}
+
+.history-intro {
+    max-width:900px;
+
+    font-size:16px;
+
+    line-height:2;
+
+    text-align:justify;
+
+    text-indent:2em;
+}
+
+
+/* =====================================
+   时间轴
+===================================== */
+
+.timeline-section {
+    padding:
+        65px
+        30px
+        75px;
+}
+
+.timeline {
+    max-width:1000px;
+
+    margin:0 auto;
+
+    position:relative;
+}
+
+.timeline::before {
+    content:"";
+
+    position:absolute;
+
+    left:118px;
+
+    top:0;
+    bottom:0;
+
+    width:2px;
+
+    background:var(--gold);
+}
+
+.timeline-item {
+    display:grid;
+
+    grid-template-columns:
+        95px
+        1fr;
+
+    gap:48px;
+
+    margin-bottom:38px;
+
+    position:relative;
+}
+
+.timeline-year {
+    color:var(--red);
+
+    font-size:18px;
+
+    font-weight:700;
+
+    text-align:right;
+
+    padding-top:2px;
+}
+
+.timeline-content {
+    background:var(--paper-light);
+
+    border:
+        1px solid var(--border);
+
+    border-left:
+        4px solid var(--red);
+
+    padding:
+        24px
+        28px;
+
+    position:relative;
+}
+
+.timeline-content::before {
+    content:"";
+
+    position:absolute;
+
+    left:-54px;
+
+    top:28px;
+
+    width:12px;
+    height:12px;
+
+    border-radius:50%;
+
+    background:var(--red);
+
+    border:
+        3px solid var(--paper);
+}
+
+.timeline-content h3 {
+    color:var(--red);
+
+    font-size:20px;
+
+    margin-bottom:8px;
+}
+
+.timeline-content p {
+    font-size:16px;
+
+    line-height:2;
+
+    text-align:justify;
+
+    text-indent:2em;
+}
+
+
+/* =====================================
+   历史价值
+===================================== */
+
+.meaning-section {
+    background:var(--paper-light);
+
+    padding:
+        60px
+        30px
+        65px;
+}
+
+.meaning-box {
+    max-width:1000px;
+
+    margin:0 auto;
+}
+
+.meaning-box h2 {
+    color:var(--red);
+
+    font-size:28px;
+
+    margin-bottom:4px;
+}
+
+.meaning-box .en {
+    color:var(--bronze);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:14px;
+
+    margin-bottom:22px;
+}
+
+.meaning-box p {
+    font-size:16px;
+
+    line-height:2;
+
+    text-align:justify;
+
+    text-indent:2em;
+
+    margin:
+        0
+        0
+        .25em
+        0;
+}
+
+
+/* =====================================
+   复刊
+===================================== */
+
+.revival-section {
+    padding:
+        60px
+        30px
+        75px;
+}
+
+.revival-box {
+    max-width:1000px;
+
+    margin:0 auto;
+
+    background:var(--paper-light);
+
+    border:
+        1px solid var(--border);
+
+    border-top:
+        5px solid var(--red);
+
+    padding:
+        36px
+        40px;
+}
+
+.revival-box h2 {
+    color:var(--red);
+
+    font-size:27px;
+
+    margin-bottom:15px;
+}
+
+.revival-box p {
+    font-size:16px;
+
+    line-height:2;
+
+    text-align:justify;
+
+    text-indent:2em;
+}
+
+
+/* =====================================
+   统一期刊基本信息
+===================================== */
+
+.journal-basic-info {
+    background:var(--paper-light);
+
+    border-top:
+        1px solid var(--border);
+
+    padding:
+        45px
+        30px
+        50px;
+}
+
+.journal-basic-inner {
+    max-width:1000px;
+
+    margin:0 auto;
+}
+
+.journal-basic-inner h2 {
+    color:var(--red);
+
+    font-size:24px;
+
+    margin-bottom:3px;
+}
+
+.journal-basic-en {
+    color:var(--bronze);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:13px;
+
+    margin-bottom:22px;
+}
+
+.journal-info-row {
+    display:grid;
+
+    grid-template-columns:
+        150px
+        1fr;
+
+    gap:20px;
+
+    padding:
+        10px
+        0;
+
+    border-bottom:
+        1px solid #DCCCAD;
+}
+
+.journal-info-row:last-child {
+    border-bottom:none;
+}
+
+.journal-info-label {
+    color:var(--red);
+
+    font-weight:700;
+
+    font-size:14px;
+}
+
+.journal-info-value {
+    color:var(--text);
+
+    font-size:14px;
+
+    line-height:1.8;
+}
+
+.journal-info-en {
+    display:block;
+
+    color:var(--muted);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:12px;
+
+    margin-top:2px;
+}
+
+.journal-info-value a {
+    color:var(--red);
+
+    text-decoration:none;
+}
+
+.journal-info-value a:hover {
+    color:var(--bronze);
+}
+
+
+/* =====================================
+   Footer
+===================================== */
+
+footer {
+    background:var(--deep-red);
+
+    color:#D9C59A;
+
+    text-align:center;
+
+    padding:
+        22px
+        15px;
+
+    border-top:
+        3px solid var(--gold);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:12px;
+}
+
+
+/* =====================================
+   平板
+===================================== */
+
+@media(max-width:900px) {
+
+    .main-nav ul {
+        flex-wrap:wrap;
+    }
+
+    .main-nav li {
+        flex:
+            0 0
+            25%;
+    }
+
+}
+
+
+/* =====================================
+   手机
+===================================== */
+
+@media(max-width:650px) {
+
+    .journal-logo {
+        width:95%;
+    }
+
+    .main-nav li {
+        flex:
+            0 0
+            50%;
+    }
+
+    .main-nav a {
+        min-height:64px;
+        font-size:14px;
+    }
+
+    .history-hero {
+        padding:
+            45px
+            22px;
+    }
+
+    .history-hero h1 {
+        font-size:29px;
+    }
+
+    .timeline-section {
+        padding:
+            45px
+            18px
+            55px;
+    }
+
+    .timeline::before {
+        left:18px;
+    }
+
+    .timeline-item {
+        display:block;
+
+        padding-left:45px;
+    }
+
+    .timeline-year {
+        text-align:left;
+
+        margin-bottom:8px;
+    }
+
+    .timeline-content::before {
+        left:-35px;
+    }
+
+    .meaning-section,
+    .revival-section {
+        padding:
+            45px
+            22px;
+    }
+
+    .revival-box {
+        padding:
+            28px
+            22px;
+    }
+
+    .journal-info-row {
+        grid-template-columns:1fr;
+        gap:3px;
+    }
+
+}
+
+</style>
 
 </head>
 
+
 <body>
+
+
+<!-- =====================================
+     Logo
+===================================== -->
 
 <header class="journal-header">
 
-    <img
-        src="logo.png"
-        alt="泰中学刊 Journal of Thai Chinese Studies"
-        class="journal-logo"
-    >
+<img
+    src="logo.png"
+    alt="泰中学刊 Journal of Thai Chinese Studies"
+    class="journal-logo"
+>
 
 </header>
 
+
+<!-- =====================================
+     导航栏
+===================================== -->
+
 <nav class="main-nav">
 
-    <ul>
+<ul>
 
-        <li>
-            <a href="index.html">
-                首页
-                <span class="en">Home</span>
-            </a>
-        </li>
+<li>
+<a href="index.html">
+首页
+<span class="en">Home</span>
+</a>
+</li>
 
-        <li>
-            <a href="history.html">
-                过往历史
-                <span class="en">History</span>
-            </a>
-        </li>
+<li>
+<a href="history.html">
+过往历史
+<span class="en">History</span>
+</a>
+</li>
 
-        <li>
-            <a href="society.html">
-                泰中学会
-                <span class="en">Thai-Chinese Society</span>
-            </a>
-        </li>
+<li>
+<a href="society.html">
+泰中学会
+<span class="en">Thai-Chinese Society</span>
+</a>
+</li>
 
-        <li>
-            <a href="editorial-board.html">
-                学刊编委
-                <span class="en">Editorial Board</span>
-            </a>
-        </li>
+<li>
+<a href="editorial-board.html">
+学刊编委
+<span class="en">Editorial Board</span>
+</a>
+</li>
 
-        <li>
-            <a href="submission.html">
-                投稿指南
-                <span class="en">Submission Guidelines</span>
-            </a>
-        </li>
+<li>
+<a href="submission.html">
+投稿指南
+<span class="en">Submission Guidelines</span>
+</a>
+</li>
 
-        <li>
-            <a href="ethics.html">
-                出版伦理
-                <span class="en">Publication Ethics</span>
-            </a>
-        </li>
+<li>
+<a href="ethics.html">
+出版伦理
+<span class="en">Publication Ethics</span>
+</a>
+</li>
 
-        <li>
-            <a href="contact.html">
-                联系我们
-                <span class="en">Contact</span>
-            </a>
-        </li>
+<li>
+<a href="contact.html">
+联系我们
+<span class="en">Contact</span>
+</a>
+</li>
 
-    </ul>
+</ul>
 
 </nav>
 
+
 <main>
+
+
+<!-- =====================================
+     页面标题
+===================================== -->
 
 <section class="history-hero">
 
-    <div class="history-inner">
+<div class="history-inner">
 
-        <div class="section-kicker">
-            HISTORY
-        </div>
+<div class="section-kicker">
+HISTORY
+</div>
 
-        <h1>
-            过往历史
-        </h1>
+<h1>
+过往历史
+</h1>
 
-        <div class="history-en">
-            History of Journal of Thai Chinese Studies
-        </div>
+<div class="history-en">
+History of Journal of Thai Chinese Studies
+</div>
 
-        <div class="gold-divider"></div>
+<div class="gold-divider"></div>
 
-        <p class="history-intro">
-            《泰中学刊》的发展与泰中学会的学术传统密切相连。自20世纪90年代初以来，一批长期关注泰国历史、中华文化、中泰关系及华侨华人问题的学者和文化人士，逐步建立起以学术研究、文化交流和民间友好为核心的学术共同体，《泰中学刊》正是在这一背景下创办并持续发展。
-        </p>
+<p class="history-intro">
+《泰中学刊》的发展与泰中学会的学术传统密切相连。自20世纪90年代初以来，一批长期关注泰国历史、中华文化、中泰关系及华侨华人问题的学者和文化人士，逐步建立起以学术研究、文化交流和民间友好为核心的学术共同体，《泰中学刊》正是在这一背景下创办并持续发展。
+</p>
 
-    </div>
+</div>
 
 </section>
+
+
+<!-- =====================================
+     时间轴
+===================================== -->
 
 <section class="timeline-section">
 
-    <div class="timeline">
+<div class="timeline">
 
-        <div class="timeline-item">
 
-            <div class="timeline-year">
-                1992
-            </div>
+<div class="timeline-item">
 
-            <div class="timeline-content">
+<div class="timeline-year">
+1992
+</div>
 
-                <h3>
-                    泰中学会筹建
-                </h3>
+<div class="timeline-content">
 
-                <p>
-                    1992年5月10日，江白潮、林光辉、林长茂、黎道纲等十位长期关注泰国历史、中华文化、中泰关系及华侨华人问题的学者和文化人士在曼谷发起筹建泰中学会，为此后系统推动泰中文化研究与学术交流奠定基础。
-                </p>
+<h3>
+泰中学会筹建
+</h3>
 
-            </div>
+<p>
+1992年5月10日，江白潮、林光辉、林长茂、黎道纲等十位长期关注泰国历史、中华文化、中泰关系及华侨华人问题的学者和文化人士在曼谷发起筹建泰中学会，为此后系统推动泰中文化研究与学术交流奠定基础。
+</p>
 
-        </div>
+</div>
 
-        <div class="timeline-item">
+</div>
 
-            <div class="timeline-year">
-                1993
-            </div>
 
-            <div class="timeline-content">
+<div class="timeline-item">
 
-                <h3>
-                    泰中学会正式成立
-                </h3>
+<div class="timeline-year">
+1993
+</div>
 
-                <p>
-                    1993年1月10日，泰中学会正式成立。学会以推动泰中文化研究、学术交流及民间友好为宗旨，逐渐汇聚泰国华人社会、教育界、文化界及学术界的研究力量。
-                </p>
+<div class="timeline-content">
 
-            </div>
+<h3>
+泰中学会正式成立
+</h3>
 
-        </div>
+<p>
+1993年1月10日，泰中学会正式成立。学会以推动泰中文化研究、学术交流及民间友好为宗旨，逐渐汇聚泰国华人社会、教育界、文化界及学术界的研究力量。
+</p>
 
-        <div class="timeline-item">
+</div>
 
-            <div class="timeline-year">
-                1994
-            </div>
+</div>
 
-            <div class="timeline-content">
 
-                <h3>
-                    《泰中学刊》正式创刊
-                </h3>
+<div class="timeline-item">
 
-                <p>
-                    1994年10月，《泰中学刊》正式创刊。刊物围绕中泰关系、泰国历史、东南亚研究、华侨华人、泰华文学、华文教育、宗教民俗及社会文化等领域发表研究成果，逐步形成具有鲜明泰国特色和区域研究视野的学术传统。
-                </p>
+<div class="timeline-year">
+1994
+</div>
 
-            </div>
+<div class="timeline-content">
 
-        </div>
+<h3>
+《泰中学刊》正式创刊
+</h3>
 
-        <div class="timeline-item">
+<p>
+1994年10月，《泰中学刊》正式创刊。刊物围绕中泰关系、泰国历史、东南亚研究、华侨华人、泰华文学、华文教育、宗教民俗及社会文化等领域发表研究成果，逐步形成具有鲜明泰国特色和区域研究视野的学术传统。
+</p>
 
-            <div class="timeline-year">
-                1994—2018
-            </div>
+</div>
 
-            <div class="timeline-content">
+</div>
 
-                <h3>
-                    持续出版与学术积累
-                </h3>
 
-                <p>
-                    在二十余年的办刊过程中，《泰中学刊》持续记录泰华社会发展、中泰文化交流及东南亚区域研究成果，并得到泰国及中外学术界的广泛关注。泰国诗琳通公主曾为刊物亲笔题词。至2018年，《泰中学刊》累计出版二十三期，保存了大量具有学术价值和历史价值的资料。
-                </p>
+<div class="timeline-item">
 
-            </div>
+<div class="timeline-year">
+1994—2018
+</div>
 
-        </div>
+<div class="timeline-content">
 
-        <div class="timeline-item">
+<h3>
+持续出版与学术积累
+</h3>
 
-            <div class="timeline-year">
-                2018
-            </div>
+<p>
+在二十余年的办刊过程中，《泰中学刊》持续记录泰华社会发展、中泰文化交流及东南亚区域研究成果，并得到泰国及中外学术界的广泛关注。泰国诗琳通公主曾为刊物亲笔题词。历史刊物保存了大量具有学术价值和史料价值的研究资料。
+</p>
 
-            <div class="timeline-content">
+</div>
 
-                <h3>
-                    暂时停刊
-                </h3>
+</div>
 
-                <p>
-                    随着办刊环境变化以及前辈学人年事渐高，《泰中学刊》在完成二十三期出版后暂时停刊。虽然刊物暂停出版，但其积累的研究成果和学术传统仍持续影响泰国华人研究、中泰关系研究及区域文化研究。
-                </p>
 
-            </div>
+<div class="timeline-item">
 
-        </div>
+<div class="timeline-year">
+2018
+</div>
 
-        <div class="timeline-item">
+<div class="timeline-content">
 
-            <div class="timeline-year">
-                2026
-            </div>
+<h3>
+暂时停刊
+</h3>
 
-            <div class="timeline-content">
+<p>
+随着办刊环境变化以及前辈学人年事渐高，《泰中学刊》在长期持续出版后暂时停刊。虽然刊物暂停出版，但其积累的研究成果和学术传统仍持续影响泰国华人研究、中泰关系研究及区域文化研究。
+</p>
 
-                <h3>
-                    正式启动复刊
-                </h3>
+</div>
 
-                <p>
-                    2026年，在尊重历史、继承传统的基础上，《泰中学刊》正式启动复刊工作。复刊后的刊物继续秉承前辈学人严谨、务实、开放的学术精神，并进一步推进数字化出版、同行评议和国际学术交流。
-                </p>
+</div>
 
-            </div>
 
-        </div>
+<div class="timeline-item">
 
-    </div>
+<div class="timeline-year">
+2026
+</div>
+
+<div class="timeline-content">
+
+<h3>
+正式启动复刊
+</h3>
+
+<p>
+2026年，在尊重历史、继承传统的基础上，《泰中学刊》正式启动复刊工作。复刊后的刊物继续秉承前辈学人严谨、务实、开放的学术精神，并进一步推进数字化出版、同行评议和国际学术交流。
+</p>
+
+</div>
+
+</div>
+
+
+</div>
 
 </section>
+
+
+<!-- =====================================
+     历史价值
+===================================== -->
 
 <section class="meaning-section">
 
-    <div class="meaning-box">
+<div class="meaning-box">
 
-        <h2>
-            历史价值
-        </h2>
+<h2>
+历史价值
+</h2>
 
-        <div class="en">
-            Historical Significance
-        </div>
+<div class="en">
+Historical Significance
+</div>
 
-        <p>
-            《泰中学刊》二十三期历史刊物不仅记录了泰中学会的发展，也保存了20世纪末至21世纪初泰华社会、中泰关系、华侨华人、泰国历史文化及东南亚区域研究的重要学术资料。
-        </p>
+<p>
+《泰中学刊》历史刊物不仅记录了泰中学会的发展历程，也保存了20世纪末至21世纪初泰华社会、中泰关系、华侨华人、泰国历史文化及东南亚区域研究的重要学术资料。
+</p>
 
-        <p>
-            这些历史文献具有学术研究、文化传承和社会史料的多重价值，是理解泰华社会发展、中泰民间交往与文化互动的重要资料基础。
-        </p>
+<p>
+这些历史文献具有学术研究、文化传承和社会史料的多重价值，是理解泰华社会发展、中泰民间交往与文化互动的重要资料基础。
+</p>
 
-    </div>
+</div>
 
 </section>
+
+
+<!-- =====================================
+     继承与复刊
+===================================== -->
 
 <section class="revival-section">
 
-    <div class="revival-box">
+<div class="revival-box">
 
-        <h2>
-            继承与复刊
-        </h2>
+<h2>
+继承与复刊
+</h2>
 
-        <p>
-            复刊后的《泰中学刊》将在继承原有学术传统的基础上，坚持“立足泰国、连接中国、辐射东南亚、面向国际”的办刊方向，进一步拓展中泰关系、华侨华人、东南亚、泰国经济与社会、国际中文教育与跨文化传播、中国传统文化及其现代化等研究领域，努力建设具有泰国特色、东南亚视野和国际影响力的学术平台。
-        </p>
+<p>
+复刊后的《泰中学刊》将在继承原有学术传统的基础上，坚持“立足泰国、连接中国、辐射东南亚、面向国际”的办刊方向，进一步拓展中泰关系研究、华侨华人研究、东南亚区域国别研究、泰国经济与社会研究、国际中文教育与跨文化传播、中国传统文化及其现代化等研究领域，努力建设具有泰国特色、东南亚视野和国际影响力的学术平台。
+</p>
 
-    </div>
+</div>
 
 </section>
 
+
 </main>
 
+
+<!-- =====================================
+     期刊基本信息
+===================================== -->
+
+<section class="journal-basic-info">
+
+<div class="journal-basic-inner">
+
+<h2>
+期刊基本信息
+</h2>
+
+<div class="journal-basic-en">
+Journal Information
+</div>
+
+
+<div class="journal-info-row">
+
+<div class="journal-info-label">
+期刊名称
+</div>
+
+<div class="journal-info-value">
+
+《泰中学刊》
+
+<span class="journal-info-en">
+Journal of Thai Chinese Studies
+</span>
+
+</div>
+
+</div>
+
+
+<div class="journal-info-row">
+
+<div class="journal-info-label">
+出版单位
+</div>
+
+<div class="journal-info-value">
+
+泰中學會集團有限公司
+
+<span class="journal-info-en">
+CHARTERED THAI-CHINESE SOCIETY GROUP CO., LIMITED
+</span>
+
+</div>
+
+</div>
+
+
+<div class="journal-info-row">
+
+<div class="journal-info-label">
+e-ISSN
+</div>
+
+<div class="journal-info-value">
+3136-540X
+</div>
+
+</div>
+
+
+<div class="journal-info-row">
+
+<div class="journal-info-label">
+出版模式
+</div>
+
+<div class="journal-info-value">
+
+开放获取
+
+<span class="journal-info-en">
+Open Access
+</span>
+
+</div>
+
+</div>
+
+
+<div class="journal-info-row">
+
+<div class="journal-info-label">
+出版形式
+</div>
+
+<div class="journal-info-value">
+
+电子期刊
+
+<span class="journal-info-en">
+Online Journal
+</span>
+
+</div>
+
+</div>
+
+
+<div class="journal-info-row">
+
+<div class="journal-info-label">
+审稿制度
+</div>
+
+<div class="journal-info-value">
+
+同行评议
+
+<span class="journal-info-en">
+Peer Review
+</span>
+
+</div>
+
+</div>
+
+
+<div class="journal-info-row">
+
+<div class="journal-info-label">
+官方网址
+</div>
+
+<div class="journal-info-value">
+
+<a
+    href="https://thaichinesejournal.org/"
+    target="_blank"
+>
+https://thaichinesejournal.org/
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
 <footer>
-
-    © 2026 Journal of Thai Chinese Studies
-
+© 2026 Journal of Thai Chinese Studies
 </footer>
+
 
 </body>
 
