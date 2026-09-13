@@ -1,0 +1,77 @@
+name: Sync COM website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-com
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.repository == 'wangpump/thaichinesejournal' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check synchronization credential
+        env:
+          COM_SYNC_TOKEN: ${{ secrets.COM_SYNC_TOKEN }}
+        run: |
+          if [ -z "$COM_SYNC_TOKEN" ]; then
+            echo "::error::Add the COM_SYNC_TOKEN repository secret before running this workflow."
+            exit 1
+          fi
+
+      - name: Check out latest source website
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: main
+          path: source
+          persist-credentials: false
+
+      - name: Check out COM repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: wangpump/thaichinesejournal-com
+          ref: main
+          path: target
+          token: ${{ secrets.COM_SYNC_TOKEN }}
+
+      - name: Synchronize website files
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f source/index.html
+          test "$(cat source/CNAME)" = "thaichinesejournal.org"
+          test -d target/.git
+          rsync -av --delete \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='/CNAME' \
+            --exclude='/.nojekyll' \
+            source/ target/
+          printf '%s\n' 'thaichinesejournal.com' > target/CNAME
+          touch target/.nojekyll
+          test -f target/index.html
+          test "$(cat target/CNAME)" = "thaichinesejournal.com"
+
+      - name: Commit and publish changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          source_commit=$(git -C source rev-parse HEAD)
+          git -C target config user.name 'github-actions[bot]'
+          git -C target config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C target add --all
+          if git -C target diff --cached --quiet; then
+            echo 'COM website is already up to date.'
+            exit 0
+          fi
+          git -C target diff --cached --check
+          git -C target commit -m "Sync website from ${source_commit}"
+          git -C target push origin HEAD:main
