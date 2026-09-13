@@ -72,6 +72,8 @@ jobs:
             echo 'COM website is already up to date.'
             exit 0
           fi
-          git -C target diff --cached --check
+          if ! git -C target diff --cached --check; then
+            echo '::warning::Source formatting warnings detected; preserving original website content.'
+          fi
           git -C target commit -m "Sync website from ${source_commit}"
           git -C target push origin HEAD:main
